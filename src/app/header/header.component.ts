@@ -9,9 +9,11 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  toggleAnimation = false;
+  toggleAnimation: boolean | undefined;
+  firstLoad: boolean = true;
 
   toggleMenuImageAnimation() {
+    this.firstLoad = false;
     this.toggleAnimation = !this.toggleAnimation;
   }
 
