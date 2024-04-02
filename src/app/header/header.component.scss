@@ -1,0 +1,19 @@
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px 30px 100px;
+
+    .logoImg {
+        width: 66px;
+    }
+
+    .menuImg {
+        width: 40px;
+        height: 32px;
+    }
+
+    img {
+        cursor: pointer;
+    }
+}
