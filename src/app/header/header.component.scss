@@ -6,14 +6,47 @@
 
     .logoImg {
         width: 66px;
+        cursor: pointer;
     }
 
     .menuImg {
+        background-image: url(/assets/img/header_img/burger1.png);
         width: 40px;
         height: 32px;
-    }
-
-    img {
+        background-size: contain;
+        background-repeat: no-repeat;
         cursor: pointer;
     }
+}
+
+/* Definiere die Keyframes für die Animation */
+@keyframes changeImage {
+    0% {
+        background-image: url(/assets/img/header_img/burger1.png);
+    }
+
+    20% {
+        background-image: url(/assets/img/header_img/burger2.png);
+    }
+
+    40% {
+        background-image: url(/assets/img/header_img/burger3.png);
+    }
+
+    60% {
+        background-image: url(/assets/img/header_img/burger4.png);
+    }
+
+    80% {
+        background-image: url(/assets/img/header_img/close.png);
+    }
+
+    100% {
+        background-image: url(/assets/img/header_img/close.png);
+    }
+}
+
+/* Wende die Animation auf das Element an */
+.menuImg.clicked {
+    animation: changeImage 1s forwards;
 }

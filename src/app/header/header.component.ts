@@ -9,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  toggleAnimation = false;
+
+  toggleMenuImageAnimation() {
+    this.toggleAnimation = !this.toggleAnimation;
+  }
+
 }
