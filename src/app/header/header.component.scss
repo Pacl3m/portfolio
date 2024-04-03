@@ -10,7 +10,6 @@
     }
 
     .menuImg {
-        // background-image: url(/assets/img/header_img/burger1.png);
         width: 40px;
         height: 32px;
         background-size: contain;
@@ -20,13 +19,13 @@
 }
 
 
-/* Wende die Animation auf das Element an */
+
 .clicked {
     animation: changeImage 0.35s forwards;
     background-image: url(/assets/img/header_img/close.png);
 }
 
-/* Definiere die Keyframes für die Animation */
+
 @keyframes changeImage {
     0% {
         background-image: url(/assets/img/header_img/burger1.png);
