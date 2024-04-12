@@ -2,7 +2,6 @@
     position: fixed;
     padding: 40px 0px;
     top: 0;
-    // bottom: 30px;
     left: 0;
     right: 0;
     width: 100%;
@@ -13,12 +12,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // padding: 30px 100px 30px 100px;
-    // padding: 30px 0px 30px 0px;
     margin: 0 auto;
     margin-left: max(64px, calc((100% - 1200px) / 2));
     margin-right: max(64px, calc((100% - 1200px) / 2));
-    // padding: 0 64px;
 
     .logoImg {
         width: 80px;

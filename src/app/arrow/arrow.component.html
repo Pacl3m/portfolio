@@ -1,0 +1,6 @@
+<div [class.right]="direction === 'right'">
+    <div class="imgContainer" [class.imgContainerLeft]="direction === 'left'" [class.imgContainerRight]="direction === 'right'">
+        <img [src]="direction === 'left' ? 'assets/img/arrow_img/arrow_left0.png' : 'assets/img/arrow_img/arrow_right0.png'"
+            alt="Arrow" [class.leftFocus]="direction === 'left'" [class.rightFocus]="direction === 'right'">
+    </div>
+</div>
