@@ -1,6 +1,6 @@
 .headerWrapper {
     position: fixed;
-    padding: 30px 0px;
+    padding: 40px 0px;
     top: 0;
     // bottom: 30px;
     left: 0;
@@ -16,18 +16,18 @@
     // padding: 30px 100px 30px 100px;
     // padding: 30px 0px 30px 0px;
     margin: 0 auto;
-    margin-left: max(64px, calc((100% - 1440px) / 2));
-    margin-right: max(64px, calc((100% - 1440px) / 2));
+    margin-left: max(64px, calc((100% - 1200px) / 2));
+    margin-right: max(64px, calc((100% - 1200px) / 2));
     // padding: 0 64px;
 
     .logoImg {
-        width: 66px;
+        width: 80px;
         cursor: pointer;
     }
 
     .menuImg {
-        width: 40px;
-        height: 32px;
+        width: 44px;
+        height: 38px;
         background-size: contain;
         background-repeat: no-repeat;
         cursor: pointer;

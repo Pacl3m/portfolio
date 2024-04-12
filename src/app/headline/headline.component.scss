@@ -54,7 +54,7 @@
         writing-mode: vertical-lr;
         text-orientation: sideways-right;
         transform: rotate(180deg);
-        margin-bottom: 30px;
+        margin-bottom: 40px;
 
         a {
             text-decoration: none !important;
@@ -66,15 +66,15 @@
     }
 
     .rightBottomline {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
 
         .arrowScrollDownImg {
-            animation: changeBackground 1s infinite;
-            background-image: url(/assets/img/headline_img/arrow3.png);
-            background-repeat: no-repeat;
-            // background-size: contain; /* Das Hintergrundbild wird proportional skaliert, um vollständig im Element zu passen */
-            background-position: center; /* Optional: Zentriert das Hintergrundbild */
             height: 180px;
+            overflow: hidden;
+
+            img {
+                animation: changeMargin 1.25s linear infinite;
+            }
         }
 
         .arrowScrollDownText {
@@ -86,26 +86,12 @@
     }
 }
 
-@keyframes changeBackground {
+@keyframes changeMargin {
     0% {
-        background-image: url(/assets/img/headline_img/arrow0.png);
+        margin-top: -166px;
     }
-    16% {
-        background-image: url(/assets/img/headline_img/arrow1.png);
-    }
-    32% {
-        background-image: url(/assets/img/headline_img/arrow2.png);
-    }
-    48% {
-        background-image: url(/assets/img/headline_img/arrow3.png);
-    }
-    64% {
-        background-image: url(/assets/img/headline_img/arrow4.png);
-    }
-    80% {
-        background-image: url(/assets/img/headline_img/arrow5.png);
-    }
+
     100% {
-        background-image: url(/assets/img/headline_img/arrow0.png);
+        margin-top: 105px;
     }
 }
