@@ -28,7 +28,7 @@
 }
 
 @keyframes changeMarginRight {
-    0% {
+    0%, 100% {
         margin-top: 0px;
         margin-right: 0px;
     }
@@ -37,15 +37,10 @@
         margin-top: 40px;
         margin-right: 40px;
     }
-
-    100% {
-        margin-top: 0px;
-        margin-right: 0px;
-    }
 }
 
 @keyframes changeMarginLeft {
-    0% {
+    0%, 100% {
         margin-top: 0px;
         margin-left: 0px;
     }
@@ -53,10 +48,5 @@
     50% {
         margin-top: 40px;
         margin-left: 40px;
-    }
-
-    100% {
-        margin-top: 0px;
-        margin-left: 0px;
     }
 }
