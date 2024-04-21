@@ -11,10 +11,12 @@ export class HeaderComponent {
 
   toggleAnimation: boolean | undefined;
   firstLoad: boolean = true;
+  dropdownMenuActive: boolean = false;
 
   toggleMenuImageAnimation() {
     this.firstLoad = false;
     this.toggleAnimation = !this.toggleAnimation;
+    this.dropdownMenuActive = !this.dropdownMenuActive;
   }
 
 }

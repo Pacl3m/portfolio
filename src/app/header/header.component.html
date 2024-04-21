@@ -1,7 +1,17 @@
-<div class="headerWrapper">
-    <div class="headerContainer">
-        <img class="logoImg" src="assets/img/header_img/pm_logo.png" alt="">
-        <div class="menuImg {{ toggleAnimation ? 'clicked' : 'unclicked' }}" [class.firstLoad]="firstLoad"
-            (click)="toggleMenuImageAnimation()"></div>
+<div class="p-fixed">
+    <div class="headerWrapper">
+        <div class="headerContainer">
+            <img class="logoImg" src="assets/img/header_img/pm_logo.png" alt="">
+            <div class="menuImg {{ toggleAnimation ? 'clicked' : 'unclicked' }}" [class.firstLoad]="firstLoad"
+                (click)="toggleMenuImageAnimation()"></div>
+        </div>
+    </div>
+
+    <div [class.active]="dropdownMenuActive" class="dropdownMenu">
+        <div class="quickLinks">
+            <span>About me</span>
+            <span>My skills</span>
+            <span>Portfolio</span>
+        </div>
     </div>
 </div>

@@ -1,3 +1,10 @@
+.p-fixed {
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    left: 0;
+}
+
 .headerWrapper {
     position: fixed;
     padding: 40px 0px;
@@ -98,4 +105,70 @@
 
 .firstLoad {
     background-image: url(/assets/img/header_img/burger1.png) !important;
+}
+
+.active {
+    transform: translateY(0px) !important;
+}
+
+.dropdownMenu {
+    transform: translateY(-450px);
+    height: 0px;
+    // height: 500px;
+    // border: solid 5px;
+    margin-top: 130px;
+    transition: 250ms;
+
+    .quickLinks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 39px;
+
+        span {
+            cursor: pointer;
+            font-family: 'Syne';
+            font-size: 96px;
+            font-weight: 700;
+            position: relative;
+            width: 580px;
+            height: 120px;
+            text-align: center;
+
+            &::before,
+            &::after {
+                content: ''; // Pseudo-Element-Inhalt
+                position: absolute; // Absolute Positionierung relativ zum span-Element
+                bottom: 0; // Am unteren Rand des span-Elements ausrichten
+                width: 50%; // Breite des Pseudo-Elements auf 50% der Breite des span-Elements setzen
+                height: 2px; // Höhe des Pseudo-Elements (zum Beispiel 2px)
+                background-color: black; // Hintergrundfarbe des Pseudo-Elements
+                transition: 150ms; // Standard-Transition
+            }
+
+            &::before {
+                width: 5px;
+                height: 52px;
+                left: 0; // Am linken Rand des span-Elements ausrichten
+            }
+
+            &::after {
+                width: 40px;
+                height: 5px;
+                left: 0%; // Am linken Rand des span-Elements ausrichten
+                // transform: translateX(-100%); // Zentrieren Sie das Pseudo-Element horizontal
+                transition-delay: 100ms; // Verzögerung der Transition von ::after
+            }
+
+            &:hover::before {
+                height: 0px;
+            }
+
+            &:hover::after {
+                left: 57%;
+                width: 220px;
+                // transition-delay: 250ms; // Verzögerung der Transition von ::after nach ::before
+            }
+        }
+    }
 }
