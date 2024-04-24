@@ -3,7 +3,7 @@
         <div class="headerContainer">
             <img class="logoImg" src="assets/img/header_img/pm_logo.png" alt="">
             <div class="menuImg {{ toggleAnimation ? 'clicked' : 'unclicked' }}" [class.firstLoad]="firstLoad"
-                (click)="toggleMenuImageAnimation()"></div>
+                (click)="toggleDropdownMenu()"></div>
         </div>
     </div>
 
@@ -12,6 +12,22 @@
             <span>About me</span>
             <span>My skills</span>
             <span>Portfolio</span>
+        </div>
+
+        <div class="dropdownInfo">
+            <div class="dropdownInfoTop">
+                <span>Say Hi!</span>
+            </div>
+            <div class="dropdownInfoButton">
+                <div class="emailBox">
+                    <a href="mailto:pascal.moeller@posteo.de">pascal.moeller&#64;posteo.de</a>
+                </div>
+                <div class="infoLinks">
+                    <img src="assets/img/dropdown_img/git_logo.png" alt="">
+                    <img src="assets/img/dropdown_img/mail_logo.png" alt="">
+                    <img src="assets/img/dropdown_img/linkedin_logo.png" alt="">                    
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -112,7 +112,7 @@
 }
 
 .dropdownMenu {
-    transform: translateY(-450px);
+    transform: translateY(-782px);
     height: 0px;
     // height: 500px;
     // border: solid 5px;
@@ -124,6 +124,9 @@
         flex-direction: column;
         align-items: center;
         gap: 39px;
+        position: relative;
+        z-index: -1;
+        padding-bottom: 135px;
 
         span {
             cursor: pointer;
@@ -168,6 +171,90 @@
                 left: 57%;
                 width: 220px;
                 // transition-delay: 250ms; // Verzögerung der Transition von ::after nach ::before
+            }
+        }
+    }
+
+    .dropdownInfo {
+        padding-left: max(64px, (100% - 1200px) / 2);
+        padding-right: max(64px, (100% - 1200px) / 2);
+        // height: 100px;
+        background-color: black;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        position: relative;
+        padding-bottom: 52px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 140px;
+            width: 100%;
+            background-color: black;
+            // transform: skewY(4deg);
+            z-index: -1;
+            margin-top: -140px;
+            clip-path: polygon(0% 0%, 0% 0%, 100% 100%, 0% 100%);
+        }
+
+        .dropdownInfoTop {
+            background-color: black;
+
+            span {
+                cursor: pointer;
+                color: #FFFCF3;
+                font-family: 'Syne';
+                font-size: 78px;
+                font-weight: 800;
+                background-color: black;
+                transition: 125ms;
+
+                &:hover {
+                    color: #5988FF;
+                }
+            }
+        }
+    }
+
+    .dropdownInfoButton {
+        background-color: unset;
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+
+        .emailBox {
+            background-color: black;
+        }
+
+        a {
+            background-color: black;
+            color: #FFFCF3;
+            text-decoration: none;
+            font-family: 'Overpass';
+            display: block;
+            font-size: 23px;
+            font-weight: 300;
+
+            &:hover {
+                filter: opacity(0.5);
+            }
+        }
+
+        .infoLinks {
+            background-color: black;
+            gap: 42px;
+            display: flex;
+
+            img {
+                background-color: black;
+                cursor: pointer;
+
+                &:hover {
+                    filter: opacity(0.5);
+                }
             }
         }
     }

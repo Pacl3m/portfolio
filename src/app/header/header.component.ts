@@ -1,11 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
 
@@ -13,10 +12,21 @@ export class HeaderComponent {
   firstLoad: boolean = true;
   dropdownMenuActive: boolean = false;
 
-  toggleMenuImageAnimation() {
+  toggleDropdownMenu() {
     this.firstLoad = false;
     this.toggleAnimation = !this.toggleAnimation;
     this.dropdownMenuActive = !this.dropdownMenuActive;
+  }
+
+  @HostListener('document:click', ['$event'])
+  onClickOutside(event: MouseEvent) {
+    let dropdownMenu = document.querySelector('.dropdownMenu');
+    let headerWrapper = document.querySelector('.headerWrapper');
+    let isClickInsideDropdown = dropdownMenu?.contains(event.target as Node);
+    let isClickInsideHeaderWrapper = headerWrapper?.contains(event.target as Node);
+    if (!isClickInsideDropdown && !isClickInsideHeaderWrapper) {
+      this.toggleDropdownMenu();
+    }
   }
 
 }
