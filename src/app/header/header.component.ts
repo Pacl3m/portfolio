@@ -22,12 +22,13 @@ export class HeaderComponent {
   onClickOutside(event: MouseEvent) {
     let dropdownMenu = document.querySelector('.dropdownMenu');
     let headerWrapper = document.querySelector('.headerWrapper');
+    let quickLinks = document.querySelector('.quickLinks');
     let isClickInsideDropdown = dropdownMenu?.contains(event.target as Node);
     let isClickInsideHeaderWrapper = headerWrapper?.contains(event.target as Node);
-    if (!isClickInsideDropdown && !isClickInsideHeaderWrapper) {
+    let isClickInsideQuickLinks = quickLinks?.contains(event.target as Node);
+    if ((!isClickInsideDropdown && !isClickInsideHeaderWrapper) || isClickInsideQuickLinks) {
       this.dropdownMenuActive = false;
       this.toggleAnimation = false;
     }
   }
-
 }
