@@ -25,7 +25,8 @@ export class HeaderComponent {
     let isClickInsideDropdown = dropdownMenu?.contains(event.target as Node);
     let isClickInsideHeaderWrapper = headerWrapper?.contains(event.target as Node);
     if (!isClickInsideDropdown && !isClickInsideHeaderWrapper) {
-      this.toggleDropdownMenu();
+      this.dropdownMenuActive = false;
+      this.toggleAnimation = false;
     }
   }
 
