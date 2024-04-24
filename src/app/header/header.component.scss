@@ -6,6 +6,7 @@
 }
 
 .headerWrapper {
+    background-color: #FFFCF3;
     position: fixed;
     padding: 40px 0px;
     top: 0;
@@ -112,6 +113,7 @@
 }
 
 .dropdownMenu {
+    background-color: #FFFCF3;
     transform: translateY(-782px);
     height: 0px;
     // height: 500px;
@@ -120,6 +122,7 @@
     transition: 250ms;
 
     .quickLinks {
+        background-color: #FFFCF3;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -264,4 +267,10 @@
             }
         }
     }
+}
+
+.overlay {
+    z-index: -10;
+    background-color: rgba(0,0,0,0.4);
+    height: 100vh;
 }

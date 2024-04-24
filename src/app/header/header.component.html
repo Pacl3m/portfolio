@@ -9,9 +9,9 @@
 
     <div [class.active]="dropdownMenuActive" class="dropdownMenu">
         <div class="quickLinks">
-            <a href="#aboutMeSection">About me</a>
-            <a href="#aboutMeSection">My skills</a>
-            <a href="#aboutMeSection">Portfolio</a>
+            <a class="quickLinksA" href="#aboutMeSection">About me</a>
+            <a class="quickLinksA" href="#aboutMeSection">My skills</a>
+            <a class="quickLinksA" href="#aboutMeSection">Portfolio</a>
         </div>
 
         <div class="dropdownInfo">
@@ -30,4 +30,7 @@
             </div>
         </div>
     </div>
+
+    <div *ngIf="dropdownMenuActive" class="overlay"></div>
+
 </div>
