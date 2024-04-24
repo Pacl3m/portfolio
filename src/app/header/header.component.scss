@@ -237,9 +237,11 @@
             display: block;
             font-size: 23px;
             font-weight: 300;
+            transition: 125ms;
 
             &:hover {
                 filter: opacity(0.5);
+                transform: scale(1.02) translateY(-1px);;
             }
         }
 
@@ -251,9 +253,11 @@
             img {
                 background-color: black;
                 cursor: pointer;
+                transition: 125ms;
 
                 &:hover {
                     filter: opacity(0.5);
+                    transform: scale(1.1) translateY(-3px);
                 }
             }
         }
