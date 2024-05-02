@@ -3,11 +3,15 @@
     height: 592px;
     margin-top: 120px;
     margin-bottom: 32px;
+    font-family: 'Overpass';
+    font-size: 16px;
+    font-weight: 700;
 
-    .mySkillsSectionTop {
+    .mySkillsHeadline {
         display: flex;
         justify-content: center;
         align-items: center;
+
         h2 {
             text-align: center;
             font-family: 'Syne';
@@ -17,5 +21,55 @@
             width: 561px;
             background-color: #FFFCF3;
         }
+    }
+
+    .testContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 100px;
+        gap: 100px;
+
+        .mySkillsTop,
+        .mySkillsbottom {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            width: 100%;
+
+            .skillContainer {
+                width: 100px;
+                overflow: hidden;
+
+                .imageContainer {
+                    padding-bottom: 10px;
+
+                    img {
+                        &:hover {
+                            animation: changeMargin 1.25s linear forwards 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes changeMargin {
+    0% {
+        margin-left: 0px;
+    }
+
+    25% {
+        margin-left: 100px;
+    }
+
+    75% {
+        margin-left: -180px;
+    }
+
+    100% {
+        margin-left: 0px;
     }
 }
