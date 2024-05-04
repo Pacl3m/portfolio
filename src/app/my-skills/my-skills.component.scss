@@ -1,6 +1,5 @@
 .mySkillsSection {
     border: 4px solid black;
-    height: 592px;
     margin-top: 120px;
     margin-bottom: 32px;
     font-family: 'Overpass';
@@ -25,21 +24,24 @@
 
     .testContainer {
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-items: center;
-        padding: 100px 100px;
-        gap: 100px;
+        padding: 100px 0px;
+        gap: 40px;
+        margin-top: -20px;
 
-        .mySkillsTop,
-        .mySkillsbottom {
+        .mySkillsTop {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             text-align: center;
-            width: 100%;
+            max-width: 959px;
 
             .skillContainer {
-                width: 100px;
+                flex-grow: 1;
+                width: 80px;
+                margin: 40px;
+                // width: 100px;
+
                 overflow: hidden;
 
                 .imageContainer {

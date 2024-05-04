@@ -5,53 +5,12 @@
     </div>
 
     <div class="testContainer">
-
         <div class="mySkillsTop">
-            <div class="skillContainer">
-                <div class="imageContainer"><img src="/assets/img/mySkills_img/Angular.png" alt=""></div>
-                <div class="skillDescription">Angular</div>
-            </div>
-            <div class="skillContainer">
-                <div class="imageContainer"><img src="/assets/img/mySkills_img/TypeScript.png" alt=""></div>
-                <div class="skillDescription">TypeScript</div>
-            </div>
-            <div class="skillContainer">
-                <div class="imageContainer"><img src="/assets/img/mySkills_img/Javascript.png" alt=""></div>
-                <div class="skillDescription">JavaScript</div>
-            </div>
-            <div class="skillContainer">
-                <div class="imageContainer"><img src="/assets/img/mySkills_img/html.png" alt=""></div>
-                <div class="skillDescription">HTML</div>
-            </div>
-            <div class="skillContainer">
-                <div class="imageContainer"><img src="/assets/img/mySkills_img/CSS.png" alt=""></div>
-                <div class="skillDescription">CSS</div>
+            <div *ngFor="let skill of skills" class="skillContainer">
+                <div class="imageContainer"><img [src]="skill.imgSrc" alt=""></div>
+                <div class="skillDescription">{{ skill.description }}</div>
             </div>
         </div>
-
-        <div class="mySkillsbottom">
-            <div class="skillContainer">
-                <div class="imageContainer"><img src="/assets/img/mySkills_img/Firebase.png" alt=""></div>
-                <div class="skillDescription">Firebase</div>
-            </div>
-            <div class="skillContainer">
-                <div class="imageContainer"><img src="/assets/img/mySkills_img/git.png" alt=""></div>
-                <div class="skillDescription">Git</div>
-            </div>
-            <div class="skillContainer">
-                <div class="imageContainer"><img src="/assets/img/mySkills_img/scrum.png" alt=""></div>
-                <div class="skillDescription">Scrum</div>
-            </div>
-            <div class="skillContainer">
-                <div class="imageContainer"><img src="/assets/img/mySkills_img/Api.png" alt=""></div>
-                <div class="skillDescription">Rest-Api</div>
-            </div>
-            <div class="skillContainer">
-                <div class="imageContainer"><img src="/assets/img/mySkills_img/MaterialDesign.png" alt=""></div>
-                <div class="skillDescription">Material<br>Design</div>
-            </div>
-        </div>
-
     </div>
 
 </div>
