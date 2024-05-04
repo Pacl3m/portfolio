@@ -44,11 +44,15 @@
 
                 .imageContainer {
                     padding-bottom: 10px;
+                }
 
-                    img {
-                        &:hover {
-                            animation: changeMargin 1.25s linear forwards 1;
-                        }
+                &:hover {
+                    .skillDescription {
+                        color: #5988FF;
+                    }
+
+                    .imageContainer img {
+                        animation: changePadding 260ms ease-in-out forwards 1;
                     }
                 }
             }
@@ -56,17 +60,23 @@
     }
 }
 
-@keyframes changeMargin {
+@keyframes changePadding {
     0% {
         margin-left: 0px;
     }
 
     25% {
-        margin-left: 100px;
+        margin-left: 110px;
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(0.5);
     }
 
     75% {
         margin-left: -180px;
+        transform: scale(0.8);
     }
 
     100% {
