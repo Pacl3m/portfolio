@@ -1,41 +1,22 @@
-<div class="portfolioHeadline">
+<div class="portfolioHeadline" id="portfolioHeadline">
     <div class="headline">
         <h2>Portfolio</h2>
-        <span>Feel free to try out my latest development projects
-            and look into their code...</span>
+        <span>Feel free to try out my latest development projects and look into their code...</span>
     </div>
 </div>
 
-<div class="portfolioSections">
+<div *ngFor="let project of projects; let i = index" class="portfolioSections" [ngClass]="{'mirrored': project.mirrored}">
     <div class="imgContainer">
-        <img src="/assets/img/portfolio_img/sharkie_portolio.jpg" alt="">
+        <img [src]="project.imgSrc" alt="">
     </div>
-    <div class="count">01/03</div>
+    <div class="count">{{ i + 1 }}/{{ projects.length }}</div>
     <div class="descriptionContainer">
-        <div class="projectName">Sharkie</div>
-        <div class="projectSkills">HTML | CSS | JS</div>
-        <div class="projectDescription">Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz
-            basiert. Hilf Sharkie, Münzen und Giftflaschen zu finden, um gegen den Killerwal zu kämpfen.</div>
+        <div class="projectName">{{ project.name }}</div>
+        <div class="projectSkills">{{ project.skills }}</div>
+        <div class="projectDescription">{{ project.description }}</div>
         <div class="projectLinks">
-            <div class="leftBox">Live</div>
-            <div class="rightBox">GitHub</div>
-        </div>
-    </div>
-</div>
-
-<div class="portfolioSections mirrored">
-    <div class="imgContainer">
-        <img src="/assets/img/portfolio_img/sharkie_portolio.jpg" alt="">
-    </div>
-    <div class="count">01/03</div>
-    <div class="descriptionContainer">
-        <div class="projectName">Sharkie</div>
-        <div class="projectSkills">HTML | CSS | JS</div>
-        <div class="projectDescription">Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz
-            basiert. Hilf Sharkie, Münzen und Giftflaschen zu finden, um gegen den Killerwal zu kämpfen.</div>
-        <div class="projectLinks">
-            <div class="leftBox">Live</div>
-            <div class="rightBox">GitHub</div>
+            <div class="leftBox">{{ project.links.live }}</div>
+            <div class="rightBox">{{ project.links.github }}</div>
         </div>
     </div>
 </div>
