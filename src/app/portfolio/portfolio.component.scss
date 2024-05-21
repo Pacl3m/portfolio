@@ -90,7 +90,7 @@
             position: absolute;
             top: 40%;
             right: -40px;
-            transition: transform 225ms 175ms, right 200ms, top 200ms, opacity 200ms;
+            transition: transform 225ms ease 125ms, right 200ms, top 200ms, opacity 200ms;
         }
     }
 
@@ -190,7 +190,7 @@
         .imgContainer .additionalImage {
             transform: rotate(135deg);
             left: -40px;
-            transition: transform 225ms ease 175ms, left 200ms, top 200ms, opacity 200ms;
+            transition: transform 225ms ease 125ms, left 200ms, top 200ms, opacity 200ms;
         }
     }
 }
