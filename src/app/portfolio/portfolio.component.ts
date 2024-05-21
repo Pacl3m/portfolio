@@ -16,8 +16,8 @@ export class PortfolioComponent {
       skills: 'HTML | CSS | JS',
       description: 'Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Sharkie, Münzen und Giftflaschen zu finden, um gegen den Killerwal zu kämpfen.',
       links: {
-        live: 'Live',
-        github: 'GitHub'
+        live: 'https://pascal-moeller.developerakademie.net/Sharkie/index.html',
+        github: 'https://www.test.de'
       },
       mirrored: false,
     },
@@ -27,8 +27,8 @@ export class PortfolioComponent {
       skills: 'HTML | CSS | JS | API',
       description: 'Aufgabenmanager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.',
       links: {
-        live: 'Live',
-        github: 'GitHub'
+        live: 'https://pascal-moeller.developerakademie.net/myJoin/index.html',
+        github: 'https://www.test.de'
       },
       mirrored: true,
     },
@@ -38,8 +38,8 @@ export class PortfolioComponent {
       skills: 'Angular | TypeScript | Firebase',
       description: 'AChat-Messenger im Stil von Slack, Nutzer können sich per Mail oder Google registrieren. In themenbasierten Channels ist der Austausch durch Nachrichten, Bilder oder Reaktionen möglich.',
       links: {
-        live: 'Live',
-        github: 'GitHub'
+        live: 'https://www.test.de',
+        github: 'https://www.test.de'
       },
       mirrored: false,
     },
