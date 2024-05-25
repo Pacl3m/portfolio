@@ -1,5 +1,5 @@
 .p-fixed {
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     position: fixed;
     left: 0;
@@ -14,7 +14,7 @@
     right: 0;
     width: 100%;
     margin: 0 auto;
-    z-index: 1;
+    z-index: 2;
 }
 
 .headerContainer {
@@ -116,9 +116,7 @@
     background-color: #FFFCF3;
     transform: translateY(-782px);
     height: 0px;
-    // height: 500px;
-    // border: solid 5px;
-    margin-top: 130px;
+    margin-top: 125px;
     transition: 250ms;
 
     .quickLinks {
@@ -271,6 +269,6 @@
 
 .overlay {
     z-index: -10;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     height: 100vh;
 }
