@@ -1,0 +1,106 @@
+.spacer {
+    height: 50px;
+}
+
+.diagonal {
+    height: 140px;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    left: 0;
+    clip-path: polygon(0% 0%, 0% 0%, 100% 100%, 0% 100%);
+    margin-top: -140px;
+}
+
+.content {
+    height: 500px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-left: max(64px, (100% - 1200px) / 2);
+    padding-right: max(64px, (100% - 1200px) / 2);
+
+    .headline {
+        font-family: 'Syne';
+        font-size: 78px;
+        font-weight: 800;
+        color: #FFFCF3;
+        margin-top: -40px;
+    }
+
+    .textArea {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 32px;
+        gap: 20px;
+
+        .textHeadAreaHeadline {
+            color: #5988FF;
+            font-family: 'Overpass';
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .textHeadAreaUnderline {
+            color: #FFFCF3;
+            font-family: 'Overpass';
+            font-weight: 400;
+            font-size: 23px;
+        }
+
+        .inputArea {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 617px;
+            gap: 20px;
+
+            .test {
+                position: relative;
+
+                input {
+                    width: 100%;
+                    height: 50px;
+                    background-color: transparent;
+                    color: #FFFCF3;
+                    border: none;
+                    border-bottom: solid 2px #FFFCF3;
+                    position: relative;
+                    box-sizing: border-box;
+
+                    &:focus {
+                        outline: none;
+                        border: solid 3px #FFFCF3;
+                    }
+                }
+
+                &::after {
+                    content: attr(data-placeholder);
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    color: #FFFCF3;
+                    transition: 250ms;
+                    pointer-events: none;
+                    font-family: 'Overpass';
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin-left: 20px;
+                    padding-right: 2px;
+                    padding-left: 2px;
+                    background-color: black;
+                    border-radius: 100%;
+                }
+
+                &:focus-within::after {
+                    transform: translateY(-175%);
+                    margin-left: 10px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

@@ -52,7 +52,7 @@ export class HeaderComponent {
   private setupSmoothScroll() {
     const headerHeight = this.document.querySelector('.headerWrapper')?.clientHeight || 0;
     const links = this.document.querySelectorAll('.quickLinksA');
-    const offset = 100; // The offset value to stop before the target
+    const offset = 120; // The offset value to stop before the target
 
     links.forEach(link => {
       this.renderer.listen(link, 'click', (event) => {
