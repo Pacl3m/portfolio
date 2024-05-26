@@ -10,15 +10,18 @@
         <div class="inputArea">
             <div class="textBox" data-placeholder="Your name*">
                 <input type="text" (input)="onInput($event)" (mouseover)="onHover($event)"
-                    (mouseout)="onHoverOut($event)" [(ngModel)]="name">
+                    (mouseout)="onHoverOut($event)" (focus)="onFocus($event)" (blur)="onBlur($event)"
+                    [(ngModel)]="name">
             </div>
             <div class="textBox" data-placeholder="Your email*">
                 <input type="email" (input)="onInput($event)" (mouseover)="onHover($event)"
-                    (mouseout)="onHoverOut($event)" [(ngModel)]="email">
+                    (mouseout)="onHoverOut($event)" (focus)="onFocus($event)" (blur)="onBlur($event)"
+                    [(ngModel)]="email">
             </div>
             <div class="textBox messageBox" data-placeholder="Your message*">
                 <textarea cols="30" rows="10" (input)="onInput($event)" (mouseover)="onHover($event)"
-                    (mouseout)="onHoverOut($event)" [(ngModel)]="message"></textarea>
+                    (mouseout)="onHoverOut($event)" (focus)="onFocus($event)" (blur)="onBlur($event)"
+                    [(ngModel)]="message"></textarea>
             </div>
         </div>
     </div>

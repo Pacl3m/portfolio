@@ -64,16 +64,21 @@
                 width: 617px;
 
                 &.hover {
-                    border: solid 2px #FFFCF3;
-                    margin: -2px -2px 0 -2px;
+                    border: solid 3px #FFFCF3 !important;
+                    margin: -3px 0px -1.5px -3px !important;
                 }
 
-                &:focus {
-                    outline: none;
-                    border-top: solid 2px #FFFCF3;
-                    border-left: solid 2px #FFFCF3;
-                    border-right: solid 2px #FFFCF3;
+                &.hover2 {
+                    border: solid 1px #FFFCF3;
+                    margin: -1px 0px -0px -1px;
                 }
+
+                // &:focus {
+                //     outline: none;
+                //     border-top: solid 2px #FFFCF3;
+                //     border-left: solid 2px #FFFCF3;
+                //     border-right: solid 2px #FFFCF3;
+                // }
 
                 input,
                 textarea {
@@ -92,13 +97,13 @@
                 }
 
                 input {
-                    height: 50px; // Höhe für input
+                    height: 50px;
                 }
 
                 textarea {
-                    height: 150px; // Höhe für textarea
+                    height: 150px;
                     padding-top: 20px;
-                    resize: none; // Deaktiviert das manuelle Größenanpassen
+                    resize: none;
                 }
 
                 &::after {
@@ -117,12 +122,18 @@
                     padding-right: 2px;
                     padding-left: 2px;
                     background-color: black;
-                    border-radius: 50%;
                 }
 
-                &:focus-within::after {
+                // &:focus-within::after {
+                //     color: #5988FF;
+                //     transform: translateY(-170%);
+                //     margin-left: 10px;
+                //     font-size: 15px;
+                // }
+
+                &.focus::after {
                     color: #5988FF;
-                    transform: translateY(-170%);
+                    transform: translateY(-180%);
                     margin-left: 10px;
                     font-size: 15px;
                 }
