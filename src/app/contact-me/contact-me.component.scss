@@ -141,5 +141,54 @@
                 }
             }
         }
+
+        .policeAgreeBox {
+            margin-top: 8px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+
+            .hookContainer {
+
+                .confirmationBox {
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    cursor: pointer;
+
+                    &.uncheckBox {
+                        height: 18px;
+                        width: 18px;
+                        background-image: url(/assets/img/confirmationBox_img/uncheck_box.png);
+
+                        &:hover {
+                            width: 24px;
+                            height: 24px;
+                            margin: -3px;
+                            background-image: url(/assets/img/confirmationBox_img/unchecked_box_hover.png);
+                        }
+                    }
+
+                    &.checkBox {
+                        height: 18px;
+                        width: 18px;
+                        background-image: url(/assets/img/confirmationBox_img/check_box.png);
+
+                        &:hover {
+                            width: 24px;
+                            height: 24px;
+                            margin: -3px;
+                            background-image: url(/assets/img/confirmationBox_img/checked_box_hover.png);
+                        }
+                    }
+                }
+            }
+
+            .confirmationText {
+                color: #FFFCF3;
+                font-family: 'Overpass';
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
     }
 }

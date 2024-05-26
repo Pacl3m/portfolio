@@ -80,4 +80,16 @@ export class ContactMeComponent {
       (inputElement.tagName === 'TEXTAREA' && !message)
     )
   }
+
+  checkBox() {
+    let rememberMeImg: any = document.getElementById('checkBox');
+    
+    if (rememberMeImg.classList.contains('uncheckBox')) {
+        rememberMeImg.classList.remove('uncheckBox');
+        rememberMeImg.classList.add('checkBox');
+    } else {
+        rememberMeImg.classList.add('uncheckBox');
+        rememberMeImg.classList.remove('checkBox');
+    }
+}
 }

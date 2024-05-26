@@ -24,5 +24,12 @@
                     [(ngModel)]="message"></textarea>
             </div>
         </div>
+        <div class="policeAgreeBox">
+            <div class="hookContainer">
+                <div (click)="checkBox()" class="confirmationBox uncheckBox" id="checkBox"></div>
+            </div>
+            <div class="confirmationText">I've read the privacy policy and agree to the processing of my data as
+                outlined.</div>
+        </div>
     </div>
 </div>
