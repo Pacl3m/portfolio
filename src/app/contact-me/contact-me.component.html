@@ -1,17 +1,25 @@
 <div class="spacer"></div>
 <div class="diagonal"></div>
 <div class="content">
-
     <div class="headline">
         Say Hi!
     </div>
-
     <div class="textArea">
         <div class="textHeadAreaHeadline">Want to discuss a new project?</div>
         <div class="textHeadAreaUnderline">Say hello! Let's discuss your ideas and make it happen</div>
         <div class="inputArea">
-            <div class="test" data-placeholder="Your name*"><input></div>
-            <div class="test" data-placeholder="Your email*"><input></div>
+            <div class="textBox" data-placeholder="Your name*">
+                <input type="text" (input)="onInput($event)" (mouseover)="onHover($event)"
+                    (mouseout)="onHoverOut($event)" [(ngModel)]="name">
+            </div>
+            <div class="textBox" data-placeholder="Your email*">
+                <input type="email" (input)="onInput($event)" (mouseover)="onHover($event)"
+                    (mouseout)="onHoverOut($event)" [(ngModel)]="email">
+            </div>
+            <div class="textBox messageBox" data-placeholder="Your message*">
+                <textarea cols="30" rows="10" (input)="onInput($event)" (mouseover)="onHover($event)"
+                    (mouseout)="onHoverOut($event)" [(ngModel)]="message"></textarea>
+            </div>
         </div>
     </div>
 </div>
