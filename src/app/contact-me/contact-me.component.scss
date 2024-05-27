@@ -65,22 +65,15 @@
 
                 &.hover {
                     border: solid 3px #FFFCF3 !important;
-                    margin: -3px 0px -1.5px -3px !important;
+                    margin: -3px 0px -1px -3px !important;
                     border-radius: 8px;
                 }
 
                 &.hover2 {
                     border: solid 1px #FFFCF3;
-                    margin: -1px 0px -0px -1px;
+                    margin: -1px 0px 1px -1px;
                     border-radius: 8px;
                 }
-
-                // &:focus {
-                //     outline: none;
-                //     border-top: solid 2px #FFFCF3;
-                //     border-left: solid 2px #FFFCF3;
-                //     border-right: solid 2px #FFFCF3;
-                // }
 
                 input,
                 textarea {

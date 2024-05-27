@@ -39,11 +39,8 @@ export class ContactMeComponent {
     const inputElement = event.target as HTMLInputElement | HTMLTextAreaElement;
     const parentNode = inputElement.parentNode as HTMLElement;
 
-    // if ((!(this.focus && parentNode.classList.contains('focus')) && (
-    //   this.shouldRemoveClasses(inputElement, this.name, this.email, this.message)))) {
-      parentNode.classList.remove('hover');
-      this.hover = false;
-    // }
+    parentNode.classList.remove('hover');
+    this.hover = false;
   }
 
   onFocus(event: Event): void {
@@ -83,13 +80,13 @@ export class ContactMeComponent {
 
   checkBox() {
     let rememberMeImg: any = document.getElementById('checkBox');
-    
+
     if (rememberMeImg.classList.contains('uncheckBox')) {
-        rememberMeImg.classList.remove('uncheckBox');
-        rememberMeImg.classList.add('checkBox');
+      rememberMeImg.classList.remove('uncheckBox');
+      rememberMeImg.classList.add('checkBox');
     } else {
-        rememberMeImg.classList.add('uncheckBox');
-        rememberMeImg.classList.remove('checkBox');
+      rememberMeImg.classList.add('uncheckBox');
+      rememberMeImg.classList.remove('checkBox');
     }
-}
+  }
 }
