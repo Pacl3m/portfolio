@@ -1,0 +1,21 @@
+* {
+    // position: absolute;
+    // bottom: 0;
+    // background-color: red;
+}
+
+.footer-box {
+    position: absolute;
+    bottom: -752px;
+    left: 0;
+    right: 0;
+    background-color: black;
+    /* width: 100%; */
+    padding-left: max(64px, calc((100% - 1200px) / 2));
+    padding-right: max(64px, calc((100% - 1200px) / 2));
+
+    .logoImg {
+        width: 80px;
+        filter: invert(1);
+    }
+}

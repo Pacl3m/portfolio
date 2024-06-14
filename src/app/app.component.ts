@@ -7,6 +7,7 @@ import { ArrowComponent } from './arrow/arrow.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
     ArrowComponent,
     MySkillsComponent,
     PortfolioComponent,
-    ContactMeComponent],
+    ContactMeComponent,
+    FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
