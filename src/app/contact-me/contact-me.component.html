@@ -13,16 +13,19 @@
                     (mouseout)="onHoverOut($event)" (focus)="onFocus($event)" (blur)="onBlur($event)"
                     [(ngModel)]="name">
             </div>
+            <div class="nameAlert" *ngIf="noName">Your name is required</div>
             <div class="textBox" data-placeholder="Your email*">
                 <input type="email" (input)="onInput($event)" (mouseover)="onHover($event)"
                     (mouseout)="onHoverOut($event)" (focus)="onFocus($event)" (blur)="onBlur($event)"
                     [(ngModel)]="email">
             </div>
+            <div class="nameAlert" *ngIf="noEmail">Your email is required</div>
             <div class="textBox messageBox" data-placeholder="Your message*">
                 <textarea cols="30" rows="10" (input)="onInput($event)" (mouseover)="onHover($event)"
                     (mouseout)="onHoverOut($event)" (focus)="onFocus($event)" (blur)="onBlur($event)"
                     [(ngModel)]="message"></textarea>
             </div>
+            <div class="nameAlert" *ngIf="noMessage">Your message is required</div>
         </div>
         <div class="policeAgreeBox">
             <div class="hookContainer">
@@ -33,6 +36,6 @@
         </div>
     </div>
 
-    <button>Send message</button>
+    <button (click)="test()">Send message</button>
 
 </div>

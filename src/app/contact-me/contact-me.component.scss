@@ -60,6 +60,15 @@
             width: 617px;
             gap: 25px;
 
+            .nameAlert {
+                color: red;
+                font-family: 'Overpass';
+                font-weight: 400;
+                font-size: 12px;
+                margin-top: -20px;
+                margin-bottom: -20px;
+            }
+
             .textBox {
                 position: relative;
                 box-sizing: border-box;

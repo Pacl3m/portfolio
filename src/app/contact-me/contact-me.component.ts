@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.scss']
 })
@@ -14,6 +15,9 @@ export class ContactMeComponent {
   message: string = '';
   hover: boolean = false;
   focus: boolean = false;
+  noName: boolean = false;
+  noMessage: boolean = false;
+  noEmail: boolean = false;
 
   onInput(event: Event): void {
     const inputElement = event.target as HTMLInputElement | HTMLTextAreaElement;
@@ -88,5 +92,9 @@ export class ContactMeComponent {
       rememberMeImg.classList.add('uncheckBox');
       rememberMeImg.classList.remove('checkBox');
     }
+  }
+
+  test() {
+    this.noName = !this.noName;
   }
 }
