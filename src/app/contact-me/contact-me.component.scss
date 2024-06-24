@@ -13,6 +13,9 @@
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 700px;
     background-color: black;
     position: absolute;
@@ -182,6 +185,32 @@
                 font-size: 14px;
                 font-weight: 400;
             }
+        }
+    }
+
+    button {
+        cursor: pointer;
+        margin-top: 48px;
+        width: 269px;
+        height: 68px;
+        background-color: black;
+        font-family: 'Overpass';
+        font-size: 23px;
+        font-weight: 400;
+        color: #BBBBBB;
+        border: solid 4px #BBBBBB;
+        border-radius: 15px;
+        transition: 30ms;
+        box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3);
+
+        &:hover {
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
+        }
+
+        &:active {
+            transform: translateY(1px) rotateX(0) rotateY(0);
+            box-shadow: 0 15px 80px rgba(255, 255, 255, 0.5),
+                0 5px 15px rgba(255, 255, 255, 0.3);
         }
     }
 }
