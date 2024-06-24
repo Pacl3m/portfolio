@@ -25,7 +25,7 @@
                     (mouseout)="onHoverOut($event)" (focus)="onFocus($event)" (blur)="onBlur($event)"
                     [(ngModel)]="message"></textarea>
             </div>
-            <div class="nameAlert" *ngIf="noMessage">Your message is required</div>
+            <div class="nameAlert" *ngIf="noMessage">Your message is too short</div>
         </div>
         <div class="policeAgreeBox">
             <div class="hookContainer">
@@ -37,5 +37,4 @@
     </div>
 
     <button (click)="test()">Send message</button>
-
 </div>
