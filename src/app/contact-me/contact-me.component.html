@@ -12,18 +12,21 @@
                 <input type="text" (input)="onInput($event)" (mouseover)="onHover($event)"
                     (mouseout)="onHoverOut($event)" (focus)="onFocus($event)" (blur)="onBlur($event)"
                     [(ngModel)]="name">
+                <div class="aggreeBox" [ngClass]="{ 'wrong': noName, 'right': name.length >= 2  }"></div>
             </div>
             <div class="nameAlert" *ngIf="noName">Your name is required</div>
             <div class="textBox" data-placeholder="Your email*">
                 <input type="email" (input)="onInput($event)" (mouseover)="onHover($event)"
                     (mouseout)="onHoverOut($event)" (focus)="onFocus($event)" (blur)="onBlur($event)"
                     [(ngModel)]="email">
+                <div class="aggreeBox" [ngClass]="{ 'wrong': noEmail, 'right': hasAt(email) }"></div>
             </div>
             <div class="nameAlert" *ngIf="noEmail">Your email is required</div>
             <div class="textBox messageBox" data-placeholder="Your message*">
                 <textarea cols="30" rows="10" (input)="onInput($event)" (mouseover)="onHover($event)"
                     (mouseout)="onHoverOut($event)" (focus)="onFocus($event)" (blur)="onBlur($event)"
                     [(ngModel)]="message"></textarea>
+                <div class="aggreeBox" [ngClass]="{ 'wrong': noMessage, 'right': hasMinWords(message, 3) }"></div>
             </div>
             <div class="nameAlert" *ngIf="noMessage">Your message is too short</div>
         </div>
@@ -32,8 +35,10 @@
                 <div (click)="checkBox()" class="confirmationBox uncheckBox" id="checkBox"></div>
             </div>
             <div class="confirmationText">I've read the privacy policy and agree to the processing of my data as
-                outlined.</div>
+                outlined.
+            </div>
         </div>
+        <div class="hookAlert" [ngClass]="{'show': !notAccept}">Please accept the privacy policy.</div>
     </div>
 
     <button (click)="test()">Send message</button>

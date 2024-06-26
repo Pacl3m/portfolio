@@ -18,6 +18,7 @@ export class ContactMeComponent {
   noName: boolean = false;
   noMessage: boolean = false;
   noEmail: boolean = false;
+  notAccept: boolean = true;
 
   // Eingabefunktion, um den Hover-Effekt hinzuzufügen oder zu entfernen
   onInput(event: Event): void {
@@ -121,7 +122,7 @@ export class ContactMeComponent {
 
   // Testfunktion zum Umschalten der Fehlermeldung
   test() {
-    this.noName = !this.noName;
+    this.notAccept = !this.notAccept;
   }
 
   // Validierung des Namensfeldes
@@ -150,5 +151,13 @@ export class ContactMeComponent {
     } else {
       this.noMessage = true;
     }
+  }
+
+  hasMinWords(text: string, minWords: number): boolean {
+    return text.trim().split(/\s+/).length >= minWords;
+  }
+
+  hasAt(email: string): boolean {
+    return email.includes('@')
   }
 }

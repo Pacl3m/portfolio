@@ -74,11 +74,15 @@
                 box-sizing: border-box;
                 border-bottom: solid 2px #FFFCF3;
                 width: 617px;
+                display: flex;
+                // align-items: center;
+                padding-right: 25px;
 
                 &.hover {
                     border: solid 3px #FFFCF3 !important;
                     margin: -3px 0px -1px -3px !important;
                     border-radius: 8px;
+                    width: 101%;
                 }
 
                 &.hover2 {
@@ -111,6 +115,24 @@
                     height: 150px;
                     padding-top: 20px;
                     resize: none;
+                }
+
+                .aggreeBox {
+                    // color: #FFFCF3;
+                    height: 25px;
+                    width: 25px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    padding-top: 25px;
+
+                    &.wrong {
+                        background-image: url(/assets/img/contactMe_img/red.png);
+                    }
+
+                    &.right {
+                        background-image: url(/assets/img/contactMe_img/green.png);
+                    }
                 }
 
                 &::after {
@@ -193,6 +215,21 @@
                 font-family: 'Overpass';
                 font-size: 14px;
                 font-weight: 400;
+            }
+        }
+
+        .hookAlert {
+            color: red;
+            font-family: 'Overpass';
+            font-weight: 400;
+            font-size: 12px;
+            margin-top: -20px;
+            margin-bottom: -20px;
+            visibility: hidden;
+            width: 74%;
+
+            &.show {
+                visibility: unset;
             }
         }
     }
