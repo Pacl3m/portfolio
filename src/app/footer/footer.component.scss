@@ -1,21 +1,67 @@
-* {
-    // position: absolute;
-    // bottom: 0;
-    // background-color: red;
+:root {
+    --footer-height: 150px;
 }
 
-.footer-box {
-    position: absolute;
-    bottom: -752px;
-    left: 0;
-    right: 0;
-    background-color: black;
-    /* width: 100%; */
-    padding-left: max(64px, calc((100% - 1200px) / 2));
-    padding-right: max(64px, calc((100% - 1200px) / 2));
+$footer-height: 150px;
 
-    .logoImg {
-        width: 80px;
-        filter: invert(1);
+.footer-box {
+    height: $footer-height;
+    // background-color: black;
+
+    .footer {
+        height: $footer-height;
+        position: absolute;
+        // bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: black;
+        // /* width: 100%; */
+        padding-left: max(64px, calc((100% - 1200px) / 2));
+        padding-right: max(64px, calc((100% - 1200px) / 2));
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .leftFooterBox {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            .logoImg {
+                width: 80px;
+                filter: invert(1);
+            }
+
+            .copyrightBox {
+                color: white;
+                font-size: 23px;
+                font-family: 'Overpass';
+            }
+        }
+
+        .rightFooterBox {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 16px;
+
+            .infoLinks {
+                background-color: black;
+                gap: 42px;
+                display: flex;
+
+                img {
+                    height: 30px;
+                }
+
+            }
+
+            .legalNoticeBox {
+                color: white;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: 'Overpass';
+            }
+        }
     }
 }
