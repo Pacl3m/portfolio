@@ -15,7 +15,7 @@ export class HeaderComponent {
   firstLoad: boolean = true;
   dropdownMenuActive: boolean = false;
 
-  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {}
+  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit() {
     this.setupSmoothScroll();
@@ -59,7 +59,7 @@ export class HeaderComponent {
         event.preventDefault();
         const targetId = (link as HTMLAnchorElement).getAttribute('href')?.substring(1);
         const targetElement = this.document.getElementById(targetId || '');
-        
+
         if (targetElement) {
           const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight - offset;
           window.scrollTo({
@@ -69,5 +69,9 @@ export class HeaderComponent {
         }
       });
     });
+  }
+
+  reloadPage() {
+    window.location.reload();
   }
 }

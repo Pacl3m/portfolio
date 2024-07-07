@@ -26,6 +26,7 @@ $footer-height: 150px;
             .logoImg {
                 width: 80px;
                 filter: invert(1);
+                cursor: pointer;
             }
 
             .copyrightBox {
@@ -48,6 +49,13 @@ $footer-height: 150px;
 
                 img {
                     height: 30px;
+                    cursor: pointer;
+                    transition: 125ms;
+
+                    &:hover {
+                        filter: opacity(0.5);
+                        transform: scale(1.1) translateY(-3px);
+                    }
                 }
 
             }
@@ -57,6 +65,12 @@ $footer-height: 150px;
                 font-size: 16px;
                 font-weight: 400;
                 font-family: 'Overpass';
+                cursor: pointer;
+
+                &:hover {
+                    filter: opacity(0.5);
+                    transform: scale(1.05) translateY(-3px);
+                }
             }
         }
     }

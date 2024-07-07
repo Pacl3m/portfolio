@@ -160,4 +160,8 @@ export class ContactMeComponent {
   hasAt(email: string): boolean {
     return email.includes('@')
   }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

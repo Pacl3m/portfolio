@@ -41,7 +41,11 @@
             </div>
             <div class="hookAlert" [ngClass]="{'show': !notAccept}">Please accept the privacy policy.</div>
         </div>
-    
-        <button (click)="test()">Send message</button>
+
+        <div class="buttomContactMe">
+            <div class="arrowContainer"></div>
+            <button (click)="test()">Send message</button>
+            <div class="arrowContainer" (click)="scrollToTop()"><img src="/assets/img/contactMe_img/arrowUp.png" alt=""></div>
+        </div>
     </div>
 </div>

@@ -238,29 +238,56 @@
             }
         }
 
-        button {
-            cursor: pointer;
+        .buttomContactMe {
             margin-top: 48px;
-            width: 269px;
-            height: 68px;
-            background-color: black;
-            font-family: 'Overpass';
-            font-size: 23px;
-            font-weight: 400;
-            color: #BBBBBB;
-            border: solid 4px #BBBBBB;
-            border-radius: 15px;
-            transition: 30ms;
-            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
 
-            &:hover {
-                box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
+            button {
+                cursor: pointer;
+                width: 269px;
+                height: 68px;
+                background-color: black;
+                font-family: 'Overpass';
+                font-size: 23px;
+                font-weight: 400;
+                color: #BBBBBB;
+                border: solid 4px #BBBBBB;
+                border-radius: 15px;
+                transition: 30ms;
+                box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3);
+
+                &:hover {
+                    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
+                }
+
+                &:active {
+                    transform: translateY(1px) rotateX(0) rotateY(0);
+                    box-shadow: 0 15px 80px rgba(255, 255, 255, 0.5),
+                        0 5px 15px rgba(255, 255, 255, 0.3);
+                }
             }
 
-            &:active {
-                transform: translateY(1px) rotateX(0) rotateY(0);
-                box-shadow: 0 15px 80px rgba(255, 255, 255, 0.5),
-                    0 5px 15px rgba(255, 255, 255, 0.3);
+            .arrowContainer {
+                margin-top: 100px;
+                animation: changeMargin 2s linear infinite;
+
+                img {
+                    cursor: pointer;
+                }
+            }
+
+            @keyframes changeMargin {
+
+                0%,
+                100% {
+                    margin-top: 5px;
+                }
+
+                50% {
+                    margin-top: 25px;
+                }
             }
         }
     }

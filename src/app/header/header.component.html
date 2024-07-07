@@ -1,7 +1,7 @@
 <div class="p-fixed">
     <div class="headerWrapper">
         <div class="headerContainer">
-            <img class="logoImg" src="assets/img/header_img/pm_logo.png" alt="">
+            <img class="logoImg" src="assets/img/header_img/pm_logo.png" alt="" (click)="reloadPage()">
             <div class="menuImg {{ toggleAnimation ? 'clicked' : 'unclicked' }}" [class.firstLoad]="firstLoad"
                 (click)="toggleDropdownMenu()"></div>
         </div>
