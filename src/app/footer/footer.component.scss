@@ -66,10 +66,13 @@ $footer-height: 150px;
                 font-weight: 400;
                 font-family: 'Overpass';
                 cursor: pointer;
+                transition: 125ms;
 
                 &:hover {
                     filter: opacity(0.5);
-                    transform: scale(1.05) translateY(-3px);
+                    transform: scale(1.1) translateY(-1px);
+                    color: rgb(89,136,255);
+                    font-weight: 600;
                 }
             }
         }

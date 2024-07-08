@@ -19,6 +19,13 @@ export class ContactMeComponent {
   noMessage: boolean = false;
   noEmail: boolean = false;
   notAccept: boolean = true;
+  isAccept: boolean = false;
+
+  contactData = {
+    name: "",
+    email: "",
+    message: "",
+  }
 
   // Eingabefunktion, um den Hover-Effekt hinzuzufügen oder zu entfernen
   onInput(event: Event): void {
@@ -31,15 +38,6 @@ export class ContactMeComponent {
     } else if (!this.hover) {
       parentNode.classList.remove('hover');
     }
-
-    // // Validierungen basierend auf dem Eingabetyp
-    // if (inputElement.type === 'text') {
-    //   this.validateName(inputElement.value);
-    // } else if (inputElement.type === 'email') {
-    //   this.validateEmail(inputElement.value);
-    // } else if (inputElement.tagName === 'TEXTAREA') {
-    //   this.validateMessage(inputElement.value);
-    // }
   }
 
   // Funktion, um den Hover-Effekt bei Mausbewegung hinzuzufügen
@@ -109,6 +107,7 @@ export class ContactMeComponent {
 
   // Funktion zum Umschalten des Kontrollkästchens
   checkBox() {
+    this.toggleAccept();
     let rememberMeImg: any = document.getElementById('checkBox');
 
     if (rememberMeImg.classList.contains('uncheckBox')) {
@@ -121,8 +120,9 @@ export class ContactMeComponent {
   }
 
   // Testfunktion zum Umschalten der Fehlermeldung
-  test() {
-    this.notAccept = !this.notAccept;
+  toggleAccept() {
+    this.isAccept = !this.isAccept;
+    // this.notAccept = !this.notAccept;
   }
 
   // Validierung des Namensfeldes
@@ -163,5 +163,26 @@ export class ContactMeComponent {
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  checkInput() {
+    this.noName = this.name.length < 2;
+    this.noEmail = !this.email.includes('@');
+    const words = this.message.trim().split(/\s+/);
+    this.noMessage = words.length < 3;
+    if (this.noName) { setTimeout(() => this.noName = false, 2000); }
+    if (this.noEmail) { setTimeout(() => this.noEmail = false, 2000); }
+    if (this.noMessage) { setTimeout(() => this.noMessage = false, 2000); }
+    if (!this.isAccept) { this.notAccept = false } { setTimeout(() => this.notAccept = true, 2000); }
+  }
+
+  checkInput2() {
+    if (this.name.length >= 2) {
+    } else {
+      this.noName = true;
+      setTimeout(() => {
+        this.noName = false;
+      }, 2000);
+    }
   }
 }
