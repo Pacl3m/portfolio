@@ -44,8 +44,9 @@
 
         <div class="buttomContactMe">
             <div class="arrowContainer"></div>
-            <button (click)="checkInput()">Send message</button>
-            <div class="arrowContainer" (click)="scrollToTop()"><img src="/assets/img/contactMe_img/arrowUp.png" alt=""></div>
+            <button (click)="setMessageData()" [ngClass]="{'no-hover-active': !isAccept}">Send message</button>
+            <div class="arrowContainer" (click)="scrollToTop()"><img src="/assets/img/contactMe_img/arrowUp.png" alt="">
+            </div>
         </div>
     </div>
 </div>

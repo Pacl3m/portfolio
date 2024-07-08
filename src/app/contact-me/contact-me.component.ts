@@ -165,7 +165,7 @@ export class ContactMeComponent {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  checkInput() {
+  checkInput(): boolean {
     this.noName = this.name.length < 2;
     this.noEmail = !this.email.includes('@');
     const words = this.message.trim().split(/\s+/);
@@ -173,16 +173,35 @@ export class ContactMeComponent {
     if (this.noName) { setTimeout(() => this.noName = false, 2000); }
     if (this.noEmail) { setTimeout(() => this.noEmail = false, 2000); }
     if (this.noMessage) { setTimeout(() => this.noMessage = false, 2000); }
-    if (!this.isAccept) { this.notAccept = false } { setTimeout(() => this.notAccept = true, 2000); }
+    if (!this.isAccept) { this.notAccept = false } { setTimeout(() => this.notAccept = true, 2000); };
+    return !this.noName && !this.noEmail && !this.noMessage && this.notAccept;
   }
 
-  checkInput2() {
-    if (this.name.length >= 2) {
-    } else {
-      this.noName = true;
-      setTimeout(() => {
-        this.noName = false;
-      }, 2000);
+  setMessageData() {
+    if (this.checkInput()) {
+      this.contactData.name = this.name;
+      this.contactData.email = this.email;
+      this.contactData.message = this.message;
+      console.log(this.contactData);
+      this.resetContactMe();
     }
+  }
+
+  resetContactMe() {
+    this.name = "";
+    this.email = "";
+    this.message = "";
+    this.removeFocusAndHoverClasses();
+    this.checkBox();
+  }
+
+  removeFocusAndHoverClasses(): void {
+    const elements = document.querySelectorAll('.focus, .hover, .hover2');
+
+    elements.forEach(element => {
+      element.classList.remove('focus', 'hover', 'hover2');
+    });
+    this.focus = false;
+    this.hover = false;
   }
 }

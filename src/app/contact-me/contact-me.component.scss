@@ -267,6 +267,20 @@
                     box-shadow: 0 15px 80px rgba(255, 255, 255, 0.5),
                         0 5px 15px rgba(255, 255, 255, 0.3);
                 }
+
+                // Deaktiviere Hover- und Active-Effekte, wenn notAccept false ist
+                &.no-hover-active {
+                    pointer-events: none; // Deaktiviert alle Mausereignisse
+
+                    &:hover {
+                        box-shadow: none; // Keine Hover-Effekte
+                    }
+
+                    &:active {
+                        transform: none; // Keine Active-Effekte
+                        box-shadow: none; // Keine Active-Effekte
+                    }
+                }
             }
 
             .arrowContainer {
