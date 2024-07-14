@@ -2,12 +2,37 @@
     margin-top: 120px;
     margin-bottom: 32px;
 
+    @media(max-width: 1080px) {
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
     .headlineAboutMe {
         h2 {
             font-family: 'Syne';
             font-size: 78px;
             font-weight: 800;
             margin: 0;
+
+            @media(max-width: 1250px) {
+                font-size: 64px;
+            }
+
+            @media(max-width: 1130px) {
+                font-size: 56px;
+            }
+
+            @media(max-width: 1080px) {
+                text-align: center;
+            }
+
+            @media(max-width: 650px) {
+                font-size: 40px;
+            }
+
+            @media(max-width: 450px) {
+                font-weight: 700;
+            }
 
             &:hover {
                 color: #5988FF;
@@ -21,6 +46,11 @@
         align-items: center;
         margin-bottom: 64px;
 
+        @media(max-width: 1080px) {
+            flex-direction: column-reverse;
+            margin-bottom: 0px;
+        }
+
         .rightAboutMeInfoBox {
             display: flex;
             flex-direction: column;
@@ -32,6 +62,29 @@
                 font-size: 23px;
                 font-weight: 400;
                 margin-bottom: 50px;
+
+                @media(max-width: 1250px) {
+                    font-size: 20px;
+                }
+
+                @media(max-width: 1130px) {
+                    font-size: 17px;
+                }
+
+                @media(max-width: 1080px) {
+                    margin-top: 24px;
+                    text-align: center;
+                    margin-bottom: 0px;
+                }
+
+                @media(max-width: 650px) {
+                    width: 400px;
+                }
+
+                @media(max-width: 450px) {
+                    width: 300px;
+                    margin-bottom: 0px;
+                }
             }
 
             .contactButton {
@@ -47,6 +100,27 @@
                 align-items: center;
                 transition: 150ms;
 
+                @media(max-width: 1250px) {
+                    height: 48px;
+                    width: 180px;
+                }
+
+                @media(max-width: 1130px) {
+                    height: 48px;
+                    width: 180px;
+                }
+
+                @media(max-width: 1080px) {
+                    margin-top: 20px;
+                }
+
+                @media(max-width: 870px) {
+                    transition: none;
+                    visibility: hidden;
+                    margin-top: 0px;
+                    height: 0;
+                }
+
                 &:hover {
                     font-weight: 800;
                     width: 280px;
@@ -59,8 +133,20 @@
             display: inline-block;
             margin-top: -32px;
 
+            @media(max-width: 1080px) {
+                margin-top: 24px;
+            }
+
             img {
                 height: 440px;
+
+                @media(max-width: 1250px) {
+                    height: 360px;
+                }
+
+                @media(max-width: 1130px) {
+                    height: 320px;
+                }
             }
 
             &::after {
