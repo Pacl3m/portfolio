@@ -13,10 +13,14 @@
     img {
         height: 180px;
         animation: changeMarginRight 2s linear infinite;
+
+        @media(max-width: 450px) {
+            height: 120px;
+        }
     }
 }
 
-.imgContainerLeft{
+.imgContainerLeft {
     height: 200px;
     width: 400px;
     margin-left: -25px;
@@ -24,11 +28,17 @@
     img {
         height: 180px;
         animation: changeMarginLeft 2s linear infinite;
+
+        @media(max-width: 450px) {
+            height: 120px;
+        }
     }
 }
 
 @keyframes changeMarginRight {
-    0%, 100% {
+
+    0%,
+    100% {
         margin-top: 0px;
         margin-right: 0px;
     }
@@ -40,7 +50,9 @@
 }
 
 @keyframes changeMarginLeft {
-    0%, 100% {
+
+    0%,
+    100% {
         margin-top: 0px;
         margin-left: 0px;
     }

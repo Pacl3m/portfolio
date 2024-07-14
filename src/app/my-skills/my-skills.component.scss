@@ -6,6 +6,14 @@
     font-size: 16px;
     font-weight: 700;
 
+    @media(max-width: 650px) {
+        margin-top: 60px;
+    }
+
+    @media(max-width: 450px) {
+        margin-top: 0px;
+    }
+
     .mySkillsHeadline {
         display: flex;
         justify-content: center;
@@ -23,6 +31,24 @@
             &:hover {
                 color: #5988FF;
             }
+
+            @media(max-width: 775px) {
+                font-size: 56px;
+                width: 390px;
+                margin-top: -40px;
+            }
+
+            @media(max-width: 555px) {
+                font-size: 44px;
+                width: 300px;
+                margin-top: -30px;
+            }
+
+            @media(max-width: 520px) {
+                font-size: 32px;
+                width: 220px;
+                margin-top: -24px;
+            }
         }
     }
 
@@ -32,6 +58,10 @@
         padding: 100px 0px;
         gap: 40px;
         margin-top: -20px;
+
+        @media(max-width: 775px) {
+            padding: 50px 0px;
+        }
 
         .mySkillsTop {
             display: flex;
@@ -44,12 +74,28 @@
                 flex-grow: 1;
                 width: 80px;
                 margin: 40px;
-                // width: 100px;
-
                 overflow: hidden;
+
+                @media(max-width: 775px) {
+                    margin: 30px;
+                }
+
+                @media(max-width: 555px) {
+                    margin: 20px;
+                }
+
+                @media(max-width: 496px) {
+                    margin: 10px;
+                }
 
                 .imageContainer {
                     padding-bottom: 10px;
+
+                    img {
+                        @media(max-width: 520px) {
+                            height: 60px;
+                        }
+                    }
                 }
 
                 &:hover {

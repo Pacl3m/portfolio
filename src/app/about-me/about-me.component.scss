@@ -147,6 +147,10 @@
                 @media(max-width: 1130px) {
                     height: 320px;
                 }
+
+                @media(max-width: 450px) {
+                    height: 260px;
+                }
             }
 
             &::after {
