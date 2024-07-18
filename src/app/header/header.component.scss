@@ -25,6 +25,12 @@
     margin-left: max(64px, calc((100% - 1200px) / 2));
     margin-right: max(64px, calc((100% - 1200px) / 2));
 
+
+    @media(max-width: 500px) {
+        margin-left: max(32px, calc((100% - 1200px) / 2));
+        margin-right: max(32px, calc((100% - 1200px) / 2));
+    }
+
     .logoImg {
         width: 80px;
         cursor: pointer;

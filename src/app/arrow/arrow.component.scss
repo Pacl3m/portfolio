@@ -10,6 +10,10 @@
     width: 400px;
     margin-right: -25px;
 
+    @media(max-width: 450px) {
+        width: unset;
+    }
+
     img {
         height: 180px;
         animation: changeMarginRight 2s linear infinite;
@@ -24,6 +28,10 @@
     height: 200px;
     width: 400px;
     margin-left: -25px;
+
+    @media(max-width: 450px) {
+        width: unset;
+    }
 
     img {
         height: 180px;
