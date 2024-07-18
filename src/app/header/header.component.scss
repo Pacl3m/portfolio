@@ -15,6 +15,10 @@
     width: 100%;
     margin: 0 auto;
     z-index: 2;
+
+    @media(max-width: 400px) {
+        padding: 20px 0px;
+    }
 }
 
 .headerContainer {
@@ -25,7 +29,6 @@
     margin-left: max(64px, calc((100% - 1200px) / 2));
     margin-right: max(64px, calc((100% - 1200px) / 2));
 
-
     @media(max-width: 500px) {
         margin-left: max(32px, calc((100% - 1200px) / 2));
         margin-right: max(32px, calc((100% - 1200px) / 2));
@@ -34,6 +37,10 @@
     .logoImg {
         width: 80px;
         cursor: pointer;
+
+        @media(max-width: 400px) {
+            width: 64px;
+        }
     }
 
     .menuImg {
@@ -42,6 +49,10 @@
         background-size: contain;
         background-repeat: no-repeat;
         cursor: pointer;
+
+        @media(max-width: 400px) {
+            width: 32px;
+        }
     }
 }
 
@@ -125,6 +136,10 @@
     margin-top: 125px;
     transition: 250ms;
 
+    @media(max-width: 400px) {
+        margin-top: 77px;
+    }
+
     .quickLinks {
         background-color: #FFFCF3;
         display: flex;
@@ -146,12 +161,6 @@
             width: 580px;
             height: 120px;
             text-align: center;
-
-            // @media(max-width: 720px) {
-            //     font-size: 64px;
-            //     width: 380px;
-            //     height: 80px;
-            // }
 
             &::before,
             &::after {
@@ -322,3 +331,52 @@
         }
     }
 }
+
+@media(max-width: 400px) {
+    .dropdownMenu {
+        .dropdownInfoButton {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .dropdownInfo {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .dropdownInfoTop {
+                span {
+                    font-size: 50px;
+                }
+            }
+        }
+
+        .quickLinks {
+            a {
+                font-size: 36px;
+                width: 225px;
+                height: 44px;
+
+                &::after {
+                    width: 28px;
+                }
+
+                &:hover::after {
+                    width: 70px;
+                    left: 63%;
+                }
+
+                &::before {
+                    height: 22px;
+                }
+            }
+        }
+    }
+}
+
+// @media(max-width: 400px) {
+//     font-size: 36px;
+//     width: 225px;
+//     height: 44px;
+// }
