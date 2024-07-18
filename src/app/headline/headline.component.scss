@@ -105,6 +105,10 @@
                 width: 220px;
             }
 
+            @media(max-width: 380px) {
+                width: 180px;
+            }
+
             @media(max-width: 350px) {
                 width: 150px;
             }
