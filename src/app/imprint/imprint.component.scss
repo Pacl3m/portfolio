@@ -1,0 +1,19 @@
+@import "../../styles.scss";
+
+* {
+    font-family: 'Overpass';
+}
+
+.imprintContent {
+    height: calc(100vh - var(--pt) - var(--pb));
+    padding-top: var(--pt);
+    --pt: 180px;
+    --pb: 150px;
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+
+    @media(max-width: 420px) {
+        --pb: 182px;
+    }
+}

@@ -1,13 +1,14 @@
 import { Component, HostListener, Renderer2, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DOCUMENT } from '@angular/common';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
 })
 export class HeaderComponent {
 
@@ -15,7 +16,7 @@ export class HeaderComponent {
   firstLoad: boolean = true;
   dropdownMenuActive: boolean = false;
 
-  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) { }
+  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document, private router: Router) { }
 
   ngOnInit() {
     this.setupSmoothScroll();

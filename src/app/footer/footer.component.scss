@@ -86,11 +86,12 @@ $footer-height: 150px;
                 font-family: 'Overpass';
                 cursor: pointer;
                 transition: 125ms;
+                text-decoration: none;
 
                 &:hover {
                     filter: opacity(0.5);
                     transform: scale(1.1) translateY(-1px);
-                    color: rgb(89,136,255);
+                    color: rgb(89, 136, 255);
                     font-weight: 600;
                 }
             }

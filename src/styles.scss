@@ -4,3 +4,17 @@
     margin: 0;
     scroll-behavior: smooth;
 }
+
+.mainLayout {
+    background-color: #FFFCF3;
+    // max-width: 1440px;
+    // margin: 0 auto;
+    padding-left: max(64px, calc((100% - 1200px) / 2));
+    padding-right: max(64px, calc((100% - 1200px) / 2));
+    // position: relative; /* Positionieren Sie das Hauptlayout, um das Dropdown-Menü zu positionieren */
+
+    @media(max-width: 500px) {
+        padding-left: max(32px, calc((100% - 1200px) / 2));
+        padding-right: max(32px, calc((100% - 1200px) / 2));
+    }
+}

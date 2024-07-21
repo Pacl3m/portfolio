@@ -1,17 +1,17 @@
 <div class="p-fixed">
     <div class="headerWrapper">
         <div class="headerContainer">
-            <img class="logoImg" src="assets/img/header_img/pm_logo.png" alt="" (click)="reloadPage()">
+            <a routerLink=""><img class="logoImg" src="assets/img/header_img/pm_logo.png" alt=""></a>
             <div class="menuImg {{ toggleAnimation ? 'clicked' : 'unclicked' }}" [class.firstLoad]="firstLoad"
                 (click)="toggleDropdownMenu()"></div>
         </div>
     </div>
 
     <div [class.active]="dropdownMenuActive" class="dropdownMenu">
-        <div class="quickLinks">
-            <a class="quickLinksA" href="#aboutMeSection">About me</a>
+        <div class="quickLinks" routerLink="">
+            <a [routerLink]="[]" class="quickLinksA" fragment="aboutMeSection" >About me</a>
             <a class="quickLinksA" href="#mySkillsSection">My skills</a>
-            <a class="quickLinksA" href="#portfolioHeadline">Portfolio</a>
+            <a routerLink="" class="quickLinksA" fragment="portfolioHeadline" href="#portfolioHeadline">Portfolio</a>
         </div>
 
         <div class="dropdownInfo">
