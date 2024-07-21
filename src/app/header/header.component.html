@@ -8,10 +8,10 @@
     </div>
 
     <div [class.active]="dropdownMenuActive" class="dropdownMenu">
-        <div class="quickLinks" routerLink="">
-            <a [routerLink]="[]" class="quickLinksA" fragment="aboutMeSection" >About me</a>
-            <a class="quickLinksA" href="#mySkillsSection">My skills</a>
-            <a routerLink="" class="quickLinksA" fragment="portfolioHeadline" href="#portfolioHeadline">Portfolio</a>
+        <div class="quickLinks">
+            <a (click)="navigateToFragment('aboutMeSection')" class="quickLinksA">About me</a>
+            <a (click)="navigateToFragment('mySkillsSection')" class="quickLinksA">My skills</a>
+            <a (click)="navigateToFragment('portfolioHeadline')" class="quickLinksA">Portfolio</a>
         </div>
 
         <div class="dropdownInfo">
@@ -23,12 +23,18 @@
                     <a href="mailto:pascal.moeller@posteo.de">pascal.moeller&#64;posteo.de</a>
                 </div>
                 <div class="infoLinks">
-                    <a href="https://github.com/pacl3m" target="_blank"><img src="assets/img/dropdown_img/git_logo.png"
-                            alt=""></a>
-                    <a href="mailto:pascal.moeller@posteo.de"><img src="assets/img/dropdown_img/mail_logo.png"
-                            alt=""></a>
-                    <a href="https://de.linkedin.com/in/pascal-möller-01887226b?trk=people-guest_people_search-card"
-                        target="_blank"><img src="assets/img/dropdown_img/linkedin_logo.png" alt=""></a>
+                    <div class="infoLinksImg">
+                        <a href="https://github.com/pacl3m" target="_blank"><img
+                                src="assets/img/dropdown_img/git_logo.png" alt=""></a>
+                        <a href="mailto:pascal.moeller@posteo.de"><img src="assets/img/dropdown_img/mail_logo.png"
+                                alt=""></a>
+                        <a href="https://de.linkedin.com/in/pascal-möller-01887226b?trk=people-guest_people_search-card"
+                            target="_blank"><img src="assets/img/dropdown_img/linkedin_logo.png" alt=""></a>
+                    </div>
+                    <div class="infoLinksLegals">
+                        <a routerLink="/imprint" class="legalNoticeBox">Legal Notice</a>
+                        <a routerLink="/imprint" class="legalNoticeBox">Privacy Policy</a>
+                    </div>
                 </div>
             </div>
         </div>

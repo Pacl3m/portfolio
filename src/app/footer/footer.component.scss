@@ -79,22 +79,27 @@ $footer-height: 150px;
 
             }
 
-            .legalNoticeBox {
-                color: white;
-                font-size: 16px;
-                font-weight: 400;
-                font-family: 'Overpass';
-                cursor: pointer;
-                transition: 125ms;
-                text-decoration: none;
+            .infoLegals {
+                display: flex;
+                gap: 24px;
 
-                &:hover {
-                    filter: opacity(0.5);
-                    transform: scale(1.1) translateY(-1px);
-                    color: rgb(89, 136, 255);
-                    font-weight: 600;
+                .legalNoticeBox {
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-family: 'Overpass';
+                    cursor: pointer;
+                    transition: 125ms;
+                    text-decoration: none;
+
+                    &:hover {
+                        filter: unset;
+                        transform: scale(1.1) translateY(0px);
+                        color: rgb(89, 136, 255);
+                    }
                 }
             }
+
         }
     }
 }

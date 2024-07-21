@@ -77,4 +77,19 @@ export class HeaderComponent {
   reloadPage() {
     window.location.reload();
   }
+
+  navigateToFragment(fragment: string) {
+    this.router.navigate(['']).then(() => {
+      setTimeout(() => {
+        this.router.navigate([], { fragment }).then(() => {
+          const element = document.getElementById(fragment);
+          if (element) {
+            const yOffset = -170; // Adjust offset accordingly
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        });
+      }, 100);
+    });
+  }
 }

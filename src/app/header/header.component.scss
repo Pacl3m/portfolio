@@ -204,7 +204,7 @@
         padding-right: max(64px, (100% - 1200px) / 2);
         background-color: black;
         position: relative;
-        padding-bottom: 52px;
+        padding-bottom: 24px;
 
         &::before {
             content: '';
@@ -276,8 +276,31 @@
 
         .infoLinks {
             background-color: black;
-            gap: 42px;
+            gap: 10px;
             display: flex;
+            flex-direction: column;
+
+            .infoLinksImg {
+                display: flex;
+                gap: 42px;
+                justify-content: end;
+            }
+
+            .infoLinksLegals {
+                display: flex;
+                gap: 24px;
+                position: relative;
+
+                a {
+                    font-size: 16px;
+
+                    &:hover {
+                        filter: unset;
+                        transform: scale(1.1) translateY(-1px);
+                        color: rgb(89, 136, 255);
+                    }
+                }
+            }
 
             img {
                 background-color: black;

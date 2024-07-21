@@ -3,7 +3,7 @@
 }
 
 .diagonal {
-    height: 140px;
+    height: 140.8px;
     background-color: black;
     position: absolute;
     right: 0;
@@ -42,6 +42,7 @@
 
             @media(max-width: 650px) {
                 font-size: 54px;
+                margin-top: -24px;
             }
 
             @media(max-width: 450px) {
@@ -204,13 +205,6 @@
                         padding-left: 2px;
                         background-color: black;
                     }
-
-                    // &:focus-within::after {
-                    //     color: #5988FF;
-                    //     transform: translateY(-170%);
-                    //     margin-left: 10px;
-                    //     font-size: 15px;
-                    // }
 
                     &.focus::after {
                         color: #5988FF;
