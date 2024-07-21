@@ -17,7 +17,7 @@ export class PortfolioComponent {
       description: 'Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Sharkie, Münzen und Giftflaschen zu finden, um gegen den Killerwal zu kämpfen.',
       links: {
         live: 'https://pascal-moeller.developerakademie.net/Sharkie/index.html',
-        github: 'https://www.test.de'
+        github: 'https://github.com/Pacl3m/Sharkie'
       },
       mirrored: false,
     },
@@ -28,7 +28,7 @@ export class PortfolioComponent {
       description: 'Aufgabenmanager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.',
       links: {
         live: 'https://pascal-moeller.developerakademie.net/myJoin/index.html',
-        github: 'https://www.test.de'
+        github: 'https://github.com/Pacl3m/myJoin'
       },
       mirrored: true,
     },

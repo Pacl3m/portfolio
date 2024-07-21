@@ -32,9 +32,11 @@ export class HeaderComponent {
     let dropdownMenu = this.document.querySelector('.dropdownMenu');
     let headerWrapper = this.document.querySelector('.headerWrapper');
     let quickLinks = this.document.querySelectorAll('.quickLinksA');
+    let contactMe = this.document.querySelectorAll('.contactMe');
     let isClickInsideDropdown = dropdownMenu?.contains(event.target as Node);
     let isClickInsideHeaderWrapper = headerWrapper?.contains(event.target as Node);
     let isClickInsideQuickLinks = false;
+    let isClickedSayHi = headerWrapper?.contains(event.target as Node);
 
     quickLinks.forEach(element => {
       if (element.contains(event.target as Node)) {
@@ -43,7 +45,7 @@ export class HeaderComponent {
       }
     });
 
-    if ((!isClickInsideDropdown && !isClickInsideHeaderWrapper) || isClickInsideQuickLinks) {
+    if ((!isClickInsideDropdown && !isClickInsideHeaderWrapper) || isClickInsideQuickLinks || !isClickedSayHi) {
       this.dropdownMenuActive = false;
       this.toggleAnimation = false;
     }

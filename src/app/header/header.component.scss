@@ -131,7 +131,7 @@
 
 .dropdownMenu {
     background-color: #FFFCF3;
-    transform: translateY(-782px);
+    transform: translateY(-786px);
     height: 0px;
     margin-top: 125px;
     transition: 250ms;
@@ -202,11 +202,7 @@
     .dropdownInfo {
         padding-left: max(64px, (100% - 1200px) / 2);
         padding-right: max(64px, (100% - 1200px) / 2);
-        // height: 100px;
         background-color: black;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
         position: relative;
         padding-bottom: 52px;
 
@@ -227,7 +223,8 @@
         .dropdownInfoTop {
             background-color: black;
 
-            span {
+            a {
+                text-decoration: none;
                 cursor: pointer;
                 color: #FFFCF3;
                 font-family: 'Syne';
@@ -235,6 +232,14 @@
                 font-weight: 800;
                 background-color: black;
                 transition: 125ms;
+
+                @media(max-width: 400px) {
+                    font-size: 40px;
+                }
+
+                @media(max-height: 900px) {
+                    font-size: 40px;
+                }
 
                 &:hover {
                     color: #5988FF;
@@ -320,6 +325,10 @@
                 width: 330px;
                 height: 70px;
 
+                @media(max-height: 750px) {
+                    font-size: 40px;
+                }
+
                 &:hover::after {
                     width: 140px;
                 }
@@ -333,6 +342,50 @@
 }
 
 @media(max-width: 400px) {
+    .dropdownMenu {
+        .dropdownInfoButton {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .dropdownInfo {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+            .dropdownInfoTop {
+                span {
+                    font-size: 50px;
+                }
+            }
+        }
+
+        .quickLinks {
+            a {
+                font-size: 36px;
+                width: 225px;
+                height: 44px;
+
+                &::after {
+                    width: 28px;
+                }
+
+                &:hover::after {
+                    width: 70px;
+                    left: 63%;
+                }
+
+                &::before {
+                    height: 22px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-height: 750px) {
     .dropdownMenu {
         .dropdownInfoButton {
             flex-direction: column-reverse;
