@@ -2,6 +2,7 @@ import { Component, HostListener, Renderer2, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DOCUMENT } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -15,6 +16,7 @@ export class HeaderComponent {
   toggleAnimation: boolean | undefined;
   firstLoad: boolean = true;
   dropdownMenuActive: boolean = false;
+  setEng: boolean = false;
 
   constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document, private router: Router) { }
 
@@ -91,5 +93,9 @@ export class HeaderComponent {
         });
       }, 100);
     });
+  }
+
+  changeLanguage() {
+    this.setEng = !this.setEng;
   }
 }

@@ -1,0 +1,25 @@
+@import "../../styles.scss";
+
+* {
+    font-family: 'Overpass';
+}
+
+.privacyPolicyContent {
+    // height: calc(100vh - var(--pt) - var(--pb));
+    height: 100%;
+    padding-top: var(--pt);
+    padding-bottom: var(--pb);
+    --pt: 140px;
+    --pb: 50px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4 h5 {
+    font-family: 'Syne';
+}
+
+h3 {
+    font-size: 20px;
+}

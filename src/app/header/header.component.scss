@@ -43,6 +43,33 @@
         }
     }
 
+    .rightHeader {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        @media(max-width: 400px) {
+            gap: 24px;
+        }
+
+        .changeLanguage {
+            cursor: pointer;
+            height: 40px;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            img {
+                height: 40px;
+
+                @media(max-width: 400px) {
+                    height: 32px;
+                }
+            }
+        }
+
+    }
+
     .menuImg {
         width: 44px;
         height: 38px;
