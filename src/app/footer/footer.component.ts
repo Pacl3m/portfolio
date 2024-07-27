@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ChangeLanguageService } from '../change-language.service';
 
 @Component({
   selector: 'app-footer',
@@ -12,5 +13,7 @@ export class FooterComponent {
   reloadPage() {
     window.location.reload();
   }
+  constructor(public languageService: ChangeLanguageService) {
 
+  }
 }
