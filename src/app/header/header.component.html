@@ -14,8 +14,10 @@
 
     <div [class.active]="dropdownMenuActive" class="dropdownMenu">
         <div class="quickLinks">
-            <a (click)="navigateToFragment('aboutMeSection')" class="quickLinksA">About me</a>
-            <a (click)="navigateToFragment('mySkillsSection')" class="quickLinksA">My skills</a>
+            <a (click)="navigateToFragment('aboutMeSection')" class="quickLinksA">{{ languageService.isEnglish ? 'Über mich' :
+                            'About me' }}</a>
+            <a (click)="navigateToFragment('mySkillsSection')" class="quickLinksA">{{ languageService.isEnglish ? 'Skills' :
+                            'My skills' }}</a>
             <a (click)="navigateToFragment('portfolioHeadline')" class="quickLinksA">Portfolio</a>
         </div>
 
@@ -37,8 +39,11 @@
                             target="_blank"><img src="assets/img/dropdown_img/linkedin_logo.png" alt=""></a>
                     </div>
                     <div class="infoLinksLegals">
-                        <a routerLink="/imprint" class="legalNoticeBox">Impressum</a>
-                        <a routerLink="/privacy-policy" class="legalNoticeBox">Datenschutz</a>
+                        <a routerLink="/imprint" class="legalNoticeBox">{{ languageService.isEnglish ? 'Impressum' :
+                            'Legal Notice' }}</a>
+                        <a routerLink="/privacy-policy" class="legalNoticeBox">{{ languageService.isEnglish ?
+                            'Datenschutz' : 'Privacy Policy' }}</a>
+
                     </div>
                 </div>
             </div>
