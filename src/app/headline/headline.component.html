@@ -24,8 +24,8 @@
             <div class="arrowScrollDownImg">
                 <img src="/assets/img/headline_img/arrow3.png" alt="">
             </div>
-            <div *ngIf="setEng" class="arrowScrollDownText">Scroll<br>Down</div>
-            <div *ngIf="!setEng" class="arrowScrollDownText">Runter<br>Scrollen</div>
+            <div *ngIf="!languageService.isEnglish" class="arrowScrollDownText">Scroll<br>Down</div>
+            <div *ngIf="languageService.isEnglish" class="arrowScrollDownText">Runter<br>Scrollen</div>
         </div>
     </div>
 </div>

@@ -177,6 +177,10 @@
         transform: rotate(180deg);
         margin-bottom: 50px;
 
+        &:hover {
+            transform: scale(1.05) rotate(180deg);
+        }
+
         a {
             text-decoration: none !important;
             font-family: 'Overpass';

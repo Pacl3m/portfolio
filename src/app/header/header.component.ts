@@ -2,7 +2,7 @@ import { Component, HostListener, Renderer2, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DOCUMENT } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { ChangeLanguageService } from '../change-language.service';
 
 @Component({
   selector: 'app-header',
@@ -18,7 +18,11 @@ export class HeaderComponent {
   dropdownMenuActive: boolean = false;
   setEng: boolean = false;
 
-  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document, private router: Router) { }
+  constructor(
+    private renderer: Renderer2,
+    @Inject(DOCUMENT) private document: Document,
+    private router: Router,
+    public languageService: ChangeLanguageService) { }
 
   ngOnInit() {
     this.setupSmoothScroll();
@@ -31,6 +35,7 @@ export class HeaderComponent {
   }
 
   @HostListener('document:click', ['$event'])
+
   onClickOutside(event: MouseEvent) {
     let dropdownMenu = this.document.querySelector('.dropdownMenu');
     let headerWrapper = this.document.querySelector('.headerWrapper');
@@ -95,7 +100,8 @@ export class HeaderComponent {
     });
   }
 
-  changeLanguage() {
-    this.setEng = !this.setEng;
+  toogleLanguage() {
+    debugger
+    // this.languageService.changeLanguage(!this.languageService.setEng$);
   }
 }

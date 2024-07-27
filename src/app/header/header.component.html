@@ -3,7 +3,9 @@
         <div class="headerContainer">
             <a routerLink=""><img class="logoImg" src="assets/img/header_img/pm_logo.png" alt=""></a>
             <div class="rightHeader">
-                <div class="changeLanguage" (click)="changeLanguage()"><img [src]="!setEng ? 'assets/img/header_img/eng.png' : 'assets/img/header_img/de.png'" alt=""></div>
+                <div class="changeLanguage" (click)="languageService.changeLanguage()"><img
+                        [src]="languageService.isEnglish ? 'assets/img/header_img/eng.png' : 'assets/img/header_img/de.png'"
+                        alt=""></div>
                 <div class="menuImg {{ toggleAnimation ? 'clicked' : 'unclicked' }}" [class.firstLoad]="firstLoad"
                     (click)="toggleDropdownMenu()"></div>
             </div>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ChangeLanguageService } from '../change-language.service';
 
 @Component({
   selector: 'app-headline',
@@ -10,5 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './headline.component.scss'
 })
 export class HeadlineComponent {
-  setEng: boolean = false;
+  constructor(public languageService: ChangeLanguageService) {
+
+  }
 }
