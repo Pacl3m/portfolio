@@ -6,24 +6,24 @@
             Say Hi!
         </div>
         <div class="textArea">
-            <div class="textHeadAreaHeadline">Want to discuss a new project?</div>
-            <div class="textHeadAreaUnderline">Say hello! Let's discuss your ideas and make it happen</div>
+            <div class="textHeadAreaHeadline">{{ !languageService.isEnglish ? 'Interested in collaborating on a new project?' : 'Interessiert an einem gemeinsamen Projekt?' }}</div>
+            <div class="textHeadAreaUnderline">{{ !languageService.isEnglish ? 'Reach out! Lets explore your ideas and bring them to life.' : 'Lassen Sie uns Ihre Ideen erforschen und sie zum Leben erwecken.' }}</div>
             <div class="inputArea">
-                <div class="textBox" data-placeholder="Your name*">
+                <div class="textBox" [attr.data-placeholder]="!languageService.isEnglish ? 'Your name*' : 'Name*'">
                     <input type="text" (input)="onInput($event)" (mouseover)="onHover($event)"
                         (mouseout)="onHoverOut($event)" (focus)="onFocus($event)" (blur)="onBlur($event)"
                         [(ngModel)]="name">
                     <div class="aggreeBox" [ngClass]="{ 'wrong': noName, 'right': name.length >= 2  }"></div>
                 </div>
                 <div class="nameAlert" *ngIf="noName">Your name is required</div>
-                <div class="textBox" data-placeholder="Your email*">
+                <div class="textBox" [attr.data-placeholder]="!languageService.isEnglish ? 'Your email*' : 'Email*'">
                     <input type="email" (input)="onInput($event)" (mouseover)="onHover($event)"
                         (mouseout)="onHoverOut($event)" (focus)="onFocus($event)" (blur)="onBlur($event)"
                         [(ngModel)]="email">
                     <div class="aggreeBox" [ngClass]="{ 'wrong': noEmail, 'right': hasAt(email) }"></div>
                 </div>
                 <div class="nameAlert" *ngIf="noEmail">Your email is required</div>
-                <div class="textBox messageBox" data-placeholder="Your message*">
+                <div class="textBox messageBox" [attr.data-placeholder]="!languageService.isEnglish ? 'Your message*' : 'Nachricht*'">
                     <textarea cols="30" rows="10" (input)="onInput($event)" (mouseover)="onHover($event)"
                         (mouseout)="onHoverOut($event)" (focus)="onFocus($event)" (blur)="onBlur($event)"
                         [(ngModel)]="message"></textarea>
@@ -35,18 +35,30 @@
                 <div class="hookContainer">
                     <div (click)="checkBox()" class="confirmationBox uncheckBox" id="checkBox"></div>
                 </div>
-                <div class="confirmationText">I've read the privacy policy and agree to the processing of my data as
-                    outlined.
-                </div>
+                <div class="confirmationText">
+                    <ng-container *ngIf="!languageService.isEnglish; else germanText">
+                      I've read the <a routerLink="/privacy-policy" (click)="onPrivacyPolicyClick()">privacy policy</a> and agree to the processing of my data as outlined.
+                    </ng-container>
+                    <ng-template #germanText>
+                      Ich habe die <a routerLink="/privacy-policy" (click)="onPrivacyPolicyClick()">Datenschutzbestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.
+                    </ng-template>
+                  </div>
             </div>
             <div class="hookAlert" [ngClass]="{'show': !notAccept}">Please accept the privacy policy.</div>
         </div>
 
         <div class="buttomContactMe">
             <div class="arrowContainer"></div>
-            <button (click)="setMessageData()" [ngClass]="{'no-hover-active': !isAccept}">Send message</button>
+            <button (click)="setMessageData()" [ngClass]="{'no-hover-active': !isAccept}">{{ languageService.isEnglish ? 'Nachricht senden' :
+                    'Send message' }}</button>
             <div class="arrowContainer" (click)="scrollToTop()"><img src="/assets/img/contactMe_img/arrowUp.png" alt="">
             </div>
         </div>
     </div>
+
+    <div class="overlay">
+        <div class="sendingConfirmation">{{ languageService.isEnglish ? 'Nachricht erfolgreich gesendet' :
+                    'Message sent successfully' }}</div>
+    </div>
+
 </div>

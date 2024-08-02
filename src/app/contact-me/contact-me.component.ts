@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ChangeLanguageService } from '../change-language.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-me',
@@ -25,6 +27,10 @@ export class ContactMeComponent {
     name: "",
     email: "",
     message: "",
+  }
+
+  constructor(public languageService: ChangeLanguageService, private router: Router) {
+
   }
 
   // Eingabefunktion, um den Hover-Effekt hinzuzufügen oder zu entfernen
@@ -184,7 +190,20 @@ export class ContactMeComponent {
       this.contactData.message = this.message;
       console.log(this.contactData);
       this.resetContactMe();
+      this.sendMessage();
     }
+  }
+
+  sendMessage() {
+    let overlay = document.querySelectorAll('.overlay');
+    let sendingConfirmation = document.querySelectorAll('.sendingConfirmation');
+
+    overlay.forEach( e => {e.classList.add('d-flex')});
+    sendingConfirmation.forEach( e => {e.classList.add('appear')});
+    setTimeout(() => {
+      overlay.forEach( e => {e.classList.remove('d-flex')});
+    sendingConfirmation.forEach( e => {e.classList.remove('appear')});
+    }, 2000);
   }
 
   resetContactMe() {
@@ -203,5 +222,12 @@ export class ContactMeComponent {
     });
     this.focus = false;
     this.hover = false;
+  }
+
+  onPrivacyPolicyClick(): void {
+    // Hier kannst du die gewünschte Aktion ausführen, z.B. die Datenschutzrichtlinie anzeigen
+    console.log('Datenschutzbestimmungen wurden angeklickt');
+    // Optional: Navigiere zu einer bestimmten Seite
+    this.router.navigate(['/imprint']);
   }
 }

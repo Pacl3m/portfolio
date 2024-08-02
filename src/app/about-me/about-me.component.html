@@ -1,22 +1,18 @@
 <div id="aboutMeSection" class="aboutMeSection">
 
     <div class="headlineAboutMe">
-        <h2>About me</h2>
+        <h2>{{languageService.isEnglish ? 'Über mich' : 'About me'}}</h2>
     </div>
 
     <div class="aboutMeInfoBox">
 
         <div class="rightAboutMeInfoBox">
-            <div class="aboutMeText">
-                I am a Front-end developer based in Wiesbaden, Germany. I enjoy helping designers and companies bring
-                their
-                ideas into real life. I am looking forward to continuing my developer career with a job in a junior web
-                developer position.
-                <br>
-                <br>
-                <br>
-                If you think I’d be a good match for your projects, contact me!
+            <div class="aboutMeText"
+                [innerHTML]="languageService.isEnglish ? 
+'Ich bin ein Front-End-Entwickler aus Wiesbaden, Deutschland. Es macht mir Spaß, Designern und Unternehmen zu helfen, ihre Ideen in die Realität umzusetzen. Ich freue mich darauf, meine Karriere als Entwickler fortzusetzen und eine Stelle als Junior-Webentwickler zu finden. <br><br> Wenn Sie denken, dass ich gut zu Ihren Projekten passen würde, kontaktieren Sie mich!' : 
+'I am a Front-end developer based in Wiesbaden, Germany. I enjoy helping designers and companies bring their ideas into real life. I am looking forward to continuing my developer career with a job in a junior web developer position. <br><br> If you think I’d be a good match for your projects, contact me!'">
             </div>
+
 
             <a href="#contactMe" class="contactButton">
                 Let’s talk
