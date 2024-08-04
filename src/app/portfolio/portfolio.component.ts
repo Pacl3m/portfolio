@@ -61,8 +61,8 @@ export class PortfolioComponent implements OnInit {
           'Ein Chat-Messenger im Stil von Slack, Nutzer können sich per Mail oder Google registrieren. In themenbasierten Channels ist der Austausch durch Nachrichten, Bilder oder Reaktionen möglich.' :
           'A chat messenger in the style of Slack, users can register via email or Google. Messages, images or reactions can be exchanged in topic-based channels.',
         links: {
-          live: 'https://www.test.de',
-          github: 'https://www.test.de'
+          live: 'https://pascal-moeller.developerakademie.net/angular-projects/my-DA-Bubble/login',
+          github: 'https://github.com/Pacl3m/my-DA-Bubble.git'
         },
         mirrored: false,
       },
