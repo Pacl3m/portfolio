@@ -29,7 +29,7 @@
                         [(ngModel)]="message"></textarea>
                     <div class="aggreeBox" [ngClass]="{ 'wrong': noMessage, 'right': hasMinWords(message, 3) }"></div>
                 </div>
-                <div class="nameAlert" *ngIf="noMessage">Your message is too short</div>
+                <div class="nameAlert" *ngIf="noMessage">Your message must be <b>3</b> words long</div>
             </div>
             <div class="policeAgreeBox">
                 <div class="hookContainer">
@@ -49,9 +49,9 @@
 
         <div class="buttomContactMe">
             <div class="arrowContainer"></div>
-            <button (click)="setMessageData()" [ngClass]="{'no-hover-active': !isAccept}">{{ languageService.isEnglish ? 'Nachricht senden' :
+            <button (click)="setMessageData()" [ngClass]="{'no-hover-active': !isAccept}">{{ languageService.isEnglish ? 'Senden' :
                     'Send message' }}</button>
-            <div class="arrowContainer" (click)="scrollToTop()"><img src="/assets/img/contactMe_img/arrowUp.png" alt="">
+            <div class="arrowContainer" (click)="scrollToTop()"><img src="assets/img/contactMe_img/arrowUp.png" alt="">
             </div>
         </div>
     </div>

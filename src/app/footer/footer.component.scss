@@ -48,6 +48,10 @@ $footer-height: 150px;
                 color: white;
                 font-size: 23px;
                 font-family: 'Overpass';
+
+                @media (max-width: 500px) {
+                    font-size: 18px;
+                }
             }
         }
 

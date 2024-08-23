@@ -10,19 +10,19 @@
     </div>
 
     <div class="middleContainer">
-        <a href="#contactMe">
-            Send a message
+        <a href="#contactMe">{{ languageService.isEnglish ? 'Nachricht Senden' :
+            'Send message' }}
         </a>
     </div>
 
     <div class="bottomlineContainer">
         <div class="leftBottomline">
-            <a href="mailto:pascal.moeller@posteo.de">pascal.moeller&#64;posteo.de</a>
+            <a href="mailto:contact@pascal-moeller.de">contact&#64;pascal-moeller.de</a>
         </div>
 
         <div class="rightBottomline">
             <div class="arrowScrollDownImg">
-                <img src="/assets/img/headline_img/arrow3.png" alt="">
+                <img src="assets/img/headline_img/arrow3.png" alt="">
             </div>
             <div *ngIf="!languageService.isEnglish" class="arrowScrollDownText">Scroll<br>Down</div>
             <div *ngIf="languageService.isEnglish" class="arrowScrollDownText">Hier<br>lang</div>

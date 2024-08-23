@@ -178,11 +178,11 @@
                         padding-top: 25px;
 
                         &.wrong {
-                            background-image: url(/assets/img/contactMe_img/red.png);
+                            background-image: url(./../../assets/img/contactMe_img/red.png);
                         }
 
                         &.right {
-                            background-image: url(/assets/img/contactMe_img/green.png);
+                            background-image: url(./../../assets/img/contactMe_img/green.png);
                         }
                     }
 
@@ -208,7 +208,7 @@
                         color: #5988FF;
                         transform: translateY(-180%);
                         margin-left: 10px;
-                        font-size: 15px;
+                        font-size: 13px;
                     }
                 }
             }
@@ -237,26 +237,26 @@
                         &.uncheckBox {
                             height: 18px;
                             width: 18px;
-                            background-image: url(/assets/img/confirmationBox_img/uncheck_box.png);
+                            background-image: url(./../../assets/img/confirmationBox_img/uncheck_box.png);
 
                             &:hover {
                                 width: 24px;
                                 height: 24px;
                                 margin: -3px;
-                                background-image: url(/assets/img/confirmationBox_img/unchecked_box_hover.png);
+                                background-image: url(./../../assets/img/confirmationBox_img/unchecked_box_hover.png);
                             }
                         }
 
                         &.checkBox {
                             height: 18px;
                             width: 18px;
-                            background-image: url(/assets/img/confirmationBox_img/check_box.png);
+                            background-image: url(./../../assets/img/confirmationBox_img/check_box.png);
 
                             &:hover {
                                 width: 24px;
                                 height: 24px;
                                 margin: -3px;
-                                background-image: url(/assets/img/confirmationBox_img/checked_box_hover.png);
+                                background-image: url(./../../assets/img/confirmationBox_img/checked_box_hover.png);
                             }
                         }
                     }
@@ -274,7 +274,7 @@
                         cursor: pointer;
 
                         &:hover {
-                            font-weight: 800;
+                            text-decoration: underline;
                         }
                     }
                 }

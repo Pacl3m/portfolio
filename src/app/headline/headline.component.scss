@@ -47,7 +47,11 @@
             }
 
             @media(max-height: 850px) {
-                margin-top: 315px;
+                margin-top: 500px;
+            }
+
+            @media(max-height: 670px) {
+                margin-top: 350px;
             }
         }
     }
@@ -83,7 +87,7 @@
         }
 
         .stroke {
-            background-image: url(/assets/img/header_img/stroke.png);
+            background-image: url(./../../assets/img/header_img/stroke.png);
             width: 628px;
             height: 4px;
             background-repeat: no-repeat;
@@ -127,7 +131,7 @@
         height: 80%;
     }
 
-    @media(max-width: 870px) {
+    @media(max-width: 500px) {
         visibility: inherit;
     }
 
@@ -138,16 +142,18 @@
         text-decoration: none;
         text-align: center;
         cursor: pointer;
-        width: 230px;
-        height: 48px;
+        // width: 160px;
+        height: 32px;
         background-color: #FFFCF3;
         font-family: 'Overpass';
-        font-size: 23px;
-        font-weight: 400;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 0px 10px;
         color: black;
-        border: solid 4px black;
+        border: solid 3px black;
         border-radius: 4px;
         transition: 125ms;
+        margin-top: 72px;
 
         &:hover {
             box-shadow: 0 5px 10px black;
@@ -176,6 +182,10 @@
         text-orientation: sideways-right;
         transform: rotate(180deg);
         margin-bottom: 50px;
+
+        @media(max-height: 850px) {
+            height: 240px;
+        }
 
         &:hover {
             transform: scale(1.05) rotate(180deg);

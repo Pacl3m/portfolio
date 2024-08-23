@@ -28,7 +28,7 @@ export class PortfolioComponent implements OnInit {
   setProjects(): void {
     this.projects = [
       {
-        imgSrc: '/assets/img/portfolio_img/sharkie_portolio.jpg',
+        imgSrc: 'assets/img/portfolio_img/sharkie_portolio.jpg',
         name: 'Sharkie',
         skills: 'HTML | CSS | JS',
         description: this.languageService.isEnglish ?
@@ -41,7 +41,7 @@ export class PortfolioComponent implements OnInit {
         mirrored: false,
       },
       {
-        imgSrc: '/assets/img/portfolio_img/myJoinPortfolio.jpg',
+        imgSrc: 'assets/img/portfolio_img/myJoinPortfolio.jpg',
         name: 'Join',
         skills: 'HTML | CSS | JS | API',
         description: this.languageService.isEnglish ?
@@ -54,11 +54,11 @@ export class PortfolioComponent implements OnInit {
         mirrored: true,
       },
       {
-        imgSrc: '/assets/img/portfolio_img/myDABubblePortfolio.jpg',
+        imgSrc: 'assets/img/portfolio_img/myDABubblePortfolio.jpg',
         name: 'DABubble',
         skills: 'Angular | TypeScript | Firebase',
         description: this.languageService.isEnglish ?
-          'Ein Chat-Messenger im Stil von Slack, Nutzer können sich per Mail oder Google registrieren. In themenbasierten Channels ist der Austausch durch Nachrichten, Bilder oder Reaktionen möglich.' :
+          'Ein Chat-Messenger im Stil von Slack. Nutzer können sich per Mail oder Google registrieren. In themenbasierten Channels ist der Austausch durch Nachrichten, Bilder oder Reaktionen möglich.' :
           'A chat messenger in the style of Slack, users can register via email or Google. Messages, images or reactions can be exchanged in topic-based channels.',
         links: {
           live: 'https://pascal-moeller.developerakademie.net/angular-projects/my-DA-Bubble/login',

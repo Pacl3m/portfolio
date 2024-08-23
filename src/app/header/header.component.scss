@@ -39,7 +39,7 @@
         cursor: pointer;
 
         @media(max-width: 400px) {
-            width: 64px;
+            width: 50px;
         }
     }
 
@@ -93,69 +93,69 @@
 
 .clicked {
     animation: changeImage 0.35s forwards;
-    background-image: url(/assets/img/header_img/close.png);
+    background-image: url(./../../assets/img/header_img/close.png);
 }
 
 
 @keyframes changeImage {
     0% {
-        background-image: url(/assets/img/header_img/burger1.png);
+        background-image: url(./../../assets/img/header_img/burger1.png);
     }
 
     20% {
-        background-image: url(/assets/img/header_img/burger2.png);
+        background-image: url(./../../assets/img/header_img/burger2.png);
     }
 
     40% {
-        background-image: url(/assets/img/header_img/burger3.png);
+        background-image: url(./../../assets/img/header_img/burger3.png);
     }
 
     60% {
-        background-image: url(/assets/img/header_img/burger4.png);
+        background-image: url(./../../assets/img/header_img/burger4.png);
     }
 
     80% {
-        background-image: url(/assets/img/header_img/close.png);
+        background-image: url(./../../assets/img/header_img/close.png);
     }
 
     100% {
-        background-image: url(/assets/img/header_img/close.png);
+        background-image: url(./../../assets/img/header_img/close.png);
     }
 }
 
 .unclicked {
     animation: changeImageReverse 0.35s forwards;
-    background-image: url(/assets/img/header_img/burger1.png);
+    background-image: url(./../../assets/img/header_img/burger1.png);
 }
 
 @keyframes changeImageReverse {
     0% {
-        background-image: url(/assets/img/header_img/close.png);
+        background-image: url(./../../assets/img/header_img/close.png);
     }
 
     20% {
-        background-image: url(/assets/img/header_img/close.png);
+        background-image: url(./../../assets/img/header_img/close.png);
     }
 
     40% {
-        background-image: url(/assets/img/header_img/burger4.png);
+        background-image: url(./../../assets/img/header_img/burger4.png);
     }
 
     60% {
-        background-image: url(/assets/img/header_img/burger3.png);
+        background-image: url(./../../assets/img/header_img/burger3.png);
     }
 
     80% {
-        background-image: url(/assets/img/header_img/burger2.png);
+        background-image: url(./../../assets/img/header_img/burger2.png);
     }
 
     100% {
-        background-image: url(/assets/img/header_img/burger1.png);
+        background-image: url(./../../assets/img/header_img/burger1.png);
     }
 }
 
 .firstLoad {
-    background-image: url(/assets/img/header_img/burger1.png) !important;
+    background-image: url(./../../assets/img/header_img/burger1.png) !important;
 }
 
 .active {
@@ -244,7 +244,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            height: 140px;
+            height: 140.5px;
             width: 100%;
             background-color: black;
             // transform: skewY(4deg);
