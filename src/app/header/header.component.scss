@@ -8,7 +8,7 @@
 .headerWrapper {
     background-color: #FFFCF3;
     position: fixed;
-    padding: 40px 0px;
+    padding: 5vh 0px;
     top: 0;
     left: 0;
     right: 0;
@@ -164,13 +164,13 @@
 
 .dropdownMenu {
     background-color: #FFFCF3;
-    transform: translateY(-786px);
+    transform: translateY(-2210px);
     height: 0px;
-    margin-top: 125px;
-    transition: 250ms;
+    margin-top: 10vh;
+    transition: 250ms ease;
 
     @media(max-width: 400px) {
-        margin-top: 77px;
+        // margin-top: 77px;
     }
 
     .quickLinks {
@@ -181,7 +181,10 @@
         gap: 39px;
         position: relative;
         z-index: -1;
-        padding-bottom: 135px;
+        padding-bottom: 10vh;
+        height: 60vh;
+        // padding-top: 20px;
+        justify-content: center;
 
         a {
             color: black;
@@ -238,6 +241,8 @@
         background-color: black;
         position: relative;
         padding-bottom: 24px;
+        height: 20vh;
+        display: grid;
 
         &::before {
             content: '';
@@ -269,6 +274,7 @@
                 @media(max-width: 450px) {
                     font-size: 60px;
                 }
+
                 @media(max-width: 400px) {
                     font-size: 40px;
                 }
@@ -419,6 +425,8 @@
         }
 
         .quickLinks {
+            height: 57vh;
+
             a {
                 font-size: 36px;
                 width: 225px;

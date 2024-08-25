@@ -49,7 +49,10 @@
 
         <div class="buttomContactMe">
             <div class="arrowContainer"></div>
-            <button (click)="setMessageData()" [ngClass]="{'no-hover-active': !isAccept}">{{ languageService.isEnglish ? 'Senden' :
+            <button (click)="setMessageData()" [ngClass]="{
+                'active-button': isAccept,
+                'no-hover-active': !isAccept
+              }">{{ languageService.isEnglish ? 'Senden' :
                     'Send message' }}</button>
             <div class="arrowContainer" (click)="scrollToTop()"><img src="assets/img/contactMe_img/arrowUp.png" alt="">
             </div>
