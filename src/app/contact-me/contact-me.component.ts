@@ -1,13 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ChangeLanguageService } from '../change-language.service';
 import { Router } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+interface EmailResponse {
+  status: string;
+  message: string;
+}
 
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, HttpClientModule],
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.scss']
 })
@@ -18,10 +25,11 @@ export class ContactMeComponent {
   hover: boolean = false;
   focus: boolean = false;
   noName: boolean = false;
-  noMessage: boolean = false;
   noEmail: boolean = false;
+  noMessage: boolean = false;
   notAccept: boolean = true;
   isAccept: boolean = false;
+  private apiUrl = 'https://www.pascal-moeller.de/media/send_mail.php';
 
   contactData = {
     name: "",
@@ -29,7 +37,7 @@ export class ContactMeComponent {
     message: "",
   }
 
-  constructor(public languageService: ChangeLanguageService, private router: Router) {
+  constructor(public languageService: ChangeLanguageService, private router: Router, private http: HttpClient) {
 
   }
 
@@ -128,7 +136,6 @@ export class ContactMeComponent {
   // Testfunktion zum Umschalten der Fehlermeldung
   toggleAccept() {
     this.isAccept = !this.isAccept;
-    // this.notAccept = !this.notAccept;
   }
 
   // Validierung des Namensfeldes
@@ -188,21 +195,34 @@ export class ContactMeComponent {
       this.contactData.name = this.name;
       this.contactData.email = this.email;
       this.contactData.message = this.message;
-      console.log(this.contactData);
+      this.sendEmail(this.contactData);
       this.resetContactMe();
       this.sendMessage();
     }
+  }
+
+
+  sendEmail(data: { name: string; email: string; message: string }) {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+
+    this.http.post<EmailResponse>(this.apiUrl, data, { headers })
+      .subscribe({
+        next: () => { },
+        error: () => { },
+      });
   }
 
   sendMessage() {
     let overlay = document.querySelectorAll('.overlay');
     let sendingConfirmation = document.querySelectorAll('.sendingConfirmation');
 
-    overlay.forEach( e => {e.classList.add('d-flex')});
-    sendingConfirmation.forEach( e => {e.classList.add('appear')});
+    overlay.forEach(e => { e.classList.add('d-flex') });
+    sendingConfirmation.forEach(e => { e.classList.add('appear') });
     setTimeout(() => {
-      overlay.forEach( e => {e.classList.remove('d-flex')});
-    sendingConfirmation.forEach( e => {e.classList.remove('appear')});
+      overlay.forEach(e => { e.classList.remove('d-flex') });
+      sendingConfirmation.forEach(e => { e.classList.remove('appear') });
     }, 2000);
   }
 
@@ -225,9 +245,6 @@ export class ContactMeComponent {
   }
 
   onPrivacyPolicyClick(): void {
-    // Hier kannst du die gewünschte Aktion ausführen, z.B. die Datenschutzrichtlinie anzeigen
-    console.log('Datenschutzbestimmungen wurden angeklickt');
-    // Optional: Navigiere zu einer bestimmten Seite
     this.router.navigate(['/imprint']);
   }
 }

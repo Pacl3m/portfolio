@@ -35,7 +35,7 @@ export class PortfolioComponent implements OnInit {
           'Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Sharkie, Münzen und Giftflaschen zu finden, um gegen den Killerwal zu kämpfen.' :
           'A simple jump-and-run game based on an object-oriented approach. Help Sharkie find coins and poison bottles to fight the killer whale.',
         links: {
-          live: 'https://pascal-moeller.developerakademie.net/Sharkie/index.html',
+          live: 'https://sharkie.pascal-moeller.de/index.html',
           github: 'https://github.com/Pacl3m/Sharkie'
         },
         mirrored: false,
@@ -48,7 +48,7 @@ export class PortfolioComponent implements OnInit {
           'Aufgabenmanager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.' :
           'Task manager inspired by the Kanban system. Create and organise tasks using drag-and-drop functions, assign users and categories.',
         links: {
-          live: 'https://pascal-moeller.developerakademie.net/myJoin/index.html',
+          live: 'https://join.pascal-moeller.de/index.html',
           github: 'https://github.com/Pacl3m/myJoin'
         },
         mirrored: true,
@@ -61,7 +61,7 @@ export class PortfolioComponent implements OnInit {
           'Ein Chat-Messenger im Stil von Slack. Nutzer können sich per Mail oder Google registrieren. In themenbasierten Channels ist der Austausch durch Nachrichten, Bilder oder Reaktionen möglich.' :
           'A chat messenger in the style of Slack, users can register via email or Google. Messages, images or reactions can be exchanged in topic-based channels.',
         links: {
-          live: 'https://pascal-moeller.developerakademie.net/angular-projects/my-DA-Bubble/login',
+          live: 'https://dabubble.pascal-moeller.de/',
           github: 'https://github.com/Pacl3m/my-DA-Bubble.git'
         },
         mirrored: false,
