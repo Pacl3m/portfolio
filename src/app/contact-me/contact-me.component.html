@@ -10,21 +10,21 @@
             <div class="textHeadAreaUnderline">{{ !languageService.isEnglish ? 'Reach out! Lets explore your ideas and bring them to life.' : 'Lassen Sie uns Ihre Ideen erforschen und sie zum Leben erwecken.' }}</div>
             <div class="inputArea">
                 <div class="textBox" [attr.data-placeholder]="!languageService.isEnglish ? 'Your name*' : 'Name*'">
-                    <input type="text" (input)="onInput($event)" (mouseover)="onHover($event)"
+                    <input (keyup)="checkInput2($event)" type="text" (input)="onInput($event)" (mouseover)="onHover($event)"
                         (mouseout)="onHoverOut($event)" (focus)="onFocus($event)" (blur)="onBlur($event)"
                         [(ngModel)]="name">
                     <div class="aggreeBox" [ngClass]="{ 'wrong': noName, 'right': name.length >= 2  }"></div>
                 </div>
                 <div class="nameAlert" *ngIf="noName">Your name is required</div>
                 <div class="textBox" [attr.data-placeholder]="!languageService.isEnglish ? 'Your email*' : 'Email*'">
-                    <input type="email" (input)="onInput($event)" (mouseover)="onHover($event)"
+                    <input (keyup)="checkInput2($event)" type="email" (input)="onInput($event)" (mouseover)="onHover($event)"
                         (mouseout)="onHoverOut($event)" (focus)="onFocus($event)" (blur)="onBlur($event)"
                         [(ngModel)]="email">
                     <div class="aggreeBox" [ngClass]="{ 'wrong': noEmail, 'right': hasAt(email) }"></div>
                 </div>
                 <div class="nameAlert" *ngIf="noEmail">Your email is required</div>
                 <div class="textBox messageBox" [attr.data-placeholder]="!languageService.isEnglish ? 'Your message*' : 'Nachricht*'">
-                    <textarea cols="30" rows="10" (input)="onInput($event)" (mouseover)="onHover($event)"
+                    <textarea (keyup)="checkInput2($event)" cols="30" rows="10" (input)="onInput($event)" (mouseover)="onHover($event)"
                         (mouseout)="onHoverOut($event)" (focus)="onFocus($event)" (blur)="onBlur($event)"
                         [(ngModel)]="message"></textarea>
                     <div class="aggreeBox" [ngClass]="{ 'wrong': noMessage, 'right': hasMinWords(message, 3) }"></div>
@@ -50,8 +50,8 @@
         <div class="buttomContactMe">
             <div class="arrowContainer"></div>
             <button (click)="setMessageData()" [ngClass]="{
-                'active-button': isAccept,
-                'no-hover-active': !isAccept
+                'active-button': test,
+                'no-hover-active': !test
               }">{{ languageService.isEnglish ? 'Senden' :
                     'Send message' }}</button>
             <div class="arrowContainer" (click)="scrollToTop()"><img src="assets/img/contactMe_img/arrowUp.png" alt="">

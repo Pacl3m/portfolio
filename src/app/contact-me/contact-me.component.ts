@@ -29,7 +29,12 @@ export class ContactMeComponent {
   noMessage: boolean = false;
   notAccept: boolean = true;
   isAccept: boolean = false;
+  isAccept2: boolean = false;
   private apiUrl = 'https://www.pascal-moeller.de/media/send_mail.php';
+  name2: boolean | undefined;
+  email2: boolean | undefined;
+  message2: boolean | undefined;
+  test: boolean | undefined;
 
   contactData = {
     name: "",
@@ -110,6 +115,53 @@ export class ContactMeComponent {
     }
   }
 
+  checkInput2(event: Event): void {
+    const inputElement = event.target as HTMLInputElement | HTMLTextAreaElement;
+    const parentNode = inputElement.parentNode as HTMLElement;
+
+    if (inputElement.type === 'text') {
+      this.checkName(inputElement);
+    }
+    if (inputElement.type === 'email') {
+      this.checkEmail(inputElement);
+    }
+    if (inputElement.tagName === 'TEXTAREA') {
+      this.checkMessage(inputElement);
+    }
+    if (this.name2 && this.email2 && this.message2) {
+      this.isAccept2 = true;
+      // this.toggleAccept();
+    } else {
+      this.isAccept2 = false;
+      // this.toggleAccept();
+    }
+    this.toggleAccept();
+  }
+
+  checkName(inputElement: any) {
+    if (inputElement.type === 'text' && inputElement.value.length >= 2) {
+      this.name2 = true;
+    } else {
+      this.name2 = false;
+    }
+  }
+
+  checkEmail(inputElement: any) {
+    if (inputElement.type === 'email' && inputElement.value.includes('@')) {
+      this.email2 = true;
+    } else {
+      this.email2 = false;
+    }
+  }
+
+  checkMessage(inputElement: any) {
+    if (inputElement.type === 'textarea' && inputElement.value.trim().split(/\s+/).length >= 3) {
+      this.message2 = true;
+    } else {
+      this.message2 = false;
+    }
+  }
+
   // Prüft, ob die Klassen entfernt werden sollen
   shouldRemoveClasses(inputElement: any, name: string, email: string, message: string): boolean {
     return (
@@ -121,7 +173,7 @@ export class ContactMeComponent {
 
   // Funktion zum Umschalten des Kontrollkästchens
   checkBox() {
-    this.toggleAccept();
+    this.isAccept = !this.isAccept;
     let rememberMeImg: any = document.getElementById('checkBox');
 
     if (rememberMeImg.classList.contains('uncheckBox')) {
@@ -131,11 +183,15 @@ export class ContactMeComponent {
       rememberMeImg.classList.add('uncheckBox');
       rememberMeImg.classList.remove('checkBox');
     }
+    this.toggleAccept();
   }
 
-  // Testfunktion zum Umschalten der Fehlermeldung
   toggleAccept() {
-    this.isAccept = !this.isAccept;
+    if (this.isAccept && this.isAccept2) {
+      this.test = true;
+    } else {
+      this.test = false;
+    }
   }
 
   // Validierung des Namensfeldes
