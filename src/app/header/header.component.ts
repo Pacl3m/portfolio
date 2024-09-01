@@ -86,12 +86,23 @@ export class HeaderComponent {
   }
 
   navigateToFragment(fragment: string) {
+    let yOffset;
     this.router.navigate(['']).then(() => {
       setTimeout(() => {
         this.router.navigate([], { fragment }).then(() => {
           const element = document.getElementById(fragment);
           if (element) {
-            const yOffset = -250; // Adjust offset accordingly
+            if (innerHeight <= 500) {
+              yOffset = -130;
+            } else if (innerHeight <= 700) {
+              yOffset = -150;
+            } else if (innerHeight <= 1050) {
+              yOffset = -170;
+            } else {
+              yOffset = -250;
+            }
+            // Adjust offset accordingly
+            console.log(yOffset);
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });
           }
