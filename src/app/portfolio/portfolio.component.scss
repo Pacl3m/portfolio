@@ -102,6 +102,7 @@
         filter: grayscale(100%);
         transition: 125ms;
         max-width: 620px;
+        overflow-x: unset;
 
         @media(max-width: 400px) {
             filter: grayscale(0%);

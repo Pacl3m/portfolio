@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './my-skills.component.scss'
 })
 export class MySkillsComponent {
+  constructor(private elementRef: ElementRef) { }
+
   skills: { imgSrc: string, description: string }[] = [
     { imgSrc: 'assets/img/mySkills_img/Angular.png', description: 'Angular' },
     { imgSrc: 'assets/img/mySkills_img/TypeScript.png', description: 'TypeScript' },
@@ -21,4 +23,16 @@ export class MySkillsComponent {
     { imgSrc: 'assets/img/mySkills_img/Api.png', description: 'Rest-Api' },
     { imgSrc: 'assets/img/mySkills_img/MaterialDesign.png', description: 'Material Design' },
   ];
+
+  isVisible: boolean = false;
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    const elementPosition = this.elementRef.nativeElement.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (elementPosition < windowHeight) {
+      this.isVisible = true;
+    }
+  }
 }

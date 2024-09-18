@@ -2,6 +2,19 @@
     margin-top: 120px;
     margin-bottom: 32px;
 
+    /* Anfangszustand: Links außerhalb des Bildschirms */
+    // &.slide-in-left {
+    //     opacity: 0;
+    //     transform: translateX(-50%);
+    //     transition: 750ms cubic-bezier(0.41, 0.4, 0.27, 1.55);
+    // }
+
+    /* Endzustand: Im Sichtbereich */
+    // &.active {
+    //     opacity: 1;
+    //     transform: translateX(0);
+    // }
+
     @media(max-width: 1080px) {
         margin-top: 40px;
         margin-bottom: 10px;

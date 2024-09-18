@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ChangeLanguageService } from '../change-language.service';
@@ -35,6 +35,7 @@ export class ContactMeComponent {
   email2: boolean | undefined;
   message2: boolean | undefined;
   test: boolean | undefined;
+  isVisible: boolean = false;
 
   contactData = {
     name: "",
@@ -42,7 +43,7 @@ export class ContactMeComponent {
     message: "",
   }
 
-  constructor(public languageService: ChangeLanguageService, private router: Router, private http: HttpClient) {
+  constructor(public languageService: ChangeLanguageService, private router: Router, private http: HttpClient, private elementRef: ElementRef) {
 
   }
 
@@ -302,5 +303,15 @@ export class ContactMeComponent {
 
   onPrivacyPolicyClick(): void {
     this.router.navigate(['/imprint']);
+  }
+  
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    const elementPosition = this.elementRef.nativeElement.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (elementPosition < windowHeight) {
+      this.isVisible = true;
+    }
   }
 }

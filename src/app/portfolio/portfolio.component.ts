@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChangeLanguageService } from '../change-language.service';
 import { Subscription } from 'rxjs';
@@ -39,6 +39,7 @@ export class PortfolioComponent implements OnInit {
           github: 'https://github.com/Pacl3m/Sharkie'
         },
         mirrored: false,
+        slide: 'slide-in-right',
       },
       {
         imgSrc: 'assets/img/portfolio_img/myJoinPortfolio.jpg',
@@ -52,6 +53,7 @@ export class PortfolioComponent implements OnInit {
           github: 'https://github.com/Pacl3m/myJoin'
         },
         mirrored: true,
+        slide: 'slide-in-left',
       },
       {
         imgSrc: 'assets/img/portfolio_img/myDABubblePortfolio.jpg',
@@ -65,15 +67,28 @@ export class PortfolioComponent implements OnInit {
           github: 'https://github.com/Pacl3m/my-DA-Bubble.git'
         },
         mirrored: false,
+        slide: 'slide-in-right',
       },
     ];
   }
 
 
 
-  constructor(public languageService: ChangeLanguageService) {
+  constructor(public languageService: ChangeLanguageService, private elementRef: ElementRef) {
 
   }
+  isVisible: boolean = false;
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    const elementPosition = this.elementRef.nativeElement.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (elementPosition < windowHeight) {
+      this.isVisible = true;
+    }
+  }
+
 }
 function ngOnInit() {
   throw new Error('Function not implemented.');

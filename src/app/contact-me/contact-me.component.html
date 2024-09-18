@@ -2,10 +2,10 @@
 <div class="diagonal"></div>
 <div class="contentBox">
     <div class="content">
-        <div class="headline">
+        <div class="headline slide-in-left" [ngClass]="{'active-slide': isVisible}">
             Say Hi!
         </div>
-        <div class="textArea">
+        <div class="textArea slide-in-left" [ngClass]="{'active-slide': isVisible}">
             <div class="textHeadAreaHeadline">{{ !languageService.isEnglish ? 'Interested in collaborating on a new project?' : 'Interessiert an einem gemeinsamen Projekt?' }}</div>
             <div class="textHeadAreaUnderline">{{ !languageService.isEnglish ? 'Reach out! Lets explore your ideas and bring them to life.' : 'Lassen Sie uns Ihre Ideen erforschen und sie zum Leben erwecken.' }}</div>
             <div class="inputArea">
@@ -47,11 +47,11 @@
             <div class="hookAlert" [ngClass]="{'show': !notAccept}">Please accept the privacy policy.</div>
         </div>
 
-        <div class="buttomContactMe">
+        <div class="buttomContactMe slide-in-left" [ngClass]="{'active-slide': isVisible}">
             <div class="arrowContainer"></div>
             <button (click)="setMessageData()" [ngClass]="{
                 'active-button': test,
-                'no-hover-active': !test
+                'no-hover-active': !test,
               }">{{ languageService.isEnglish ? 'Senden' :
                     'Send message' }}</button>
             <div class="arrowContainer" (click)="scrollToTop()"><img src="assets/img/contactMe_img/arrowUp.png" alt="">
