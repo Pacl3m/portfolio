@@ -1,5 +1,5 @@
 <div class="portfolioHeadline" id="portfolioHeadline">
-    <div class="headline slide-in-left" [ngClass]="{'active-slide': isVisible}">
+    <div class="headline">
         <h2>Portfolio</h2>
         <span>
             {{ languageService.isEnglish ? 'Schauen Sie sich gerne einige meiner Projekte samt Quellcode an:' : 'Feel free to try out my latest development projects and look into their code...' }}
@@ -7,8 +7,8 @@
     </div>
 </div>
 
-<div *ngFor="let project of projects; let i = index" class="portfolioSections {{project.slide}}" 
-    [ngClass]="{'mirrored': project.mirrored ,'active-slide': isVisible}">
+<div *ngFor="let project of projects; let i = index" class="portfolioSections" 
+    [ngClass]="{'mirrored': project.mirrored}">
     <div class="imgContainer">
         <img [src]="project.imgSrc" alt="">
         <img class="additionalImage" src="assets/img/portfolio_img/link_arrow.png" alt="">

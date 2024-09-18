@@ -131,14 +131,14 @@
 
                     &.hover {
                         border: solid 3px #FFFCF3 !important;
-                        margin: -3px 0px -1px 0px !important;
+                        margin: -3px 0px -1px -3px !important;
                         border-radius: 8px;
-                        width: 100%;
+                        width: 101%;
                     }
 
                     &.hover2 {
                         border: solid 1px #FFFCF3;
-                        margin: -1px 0px 1px 0px;
+                        margin: -1px 0px 1px -1px;
                         border-radius: 8px;
                     }
 
